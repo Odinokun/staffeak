@@ -1,16 +1,17 @@
+.logo {
+  width: 120px;
+  height: 40px;
+
+  @include min(769) {
+    width: 150px;
+    height: 50px;
+  }
+}
+
 .logo__img {
   fill: $main-green;
 }
 
-
-.index-wrap {
-  .logo__text {
-    fill: $dark-green;
-  }
-}
-
-.inner-wrap {
-  .logo__text {
-    fill: $neutral-white;
-  }
+.logo__text {
+  fill: $dark-green;
 }

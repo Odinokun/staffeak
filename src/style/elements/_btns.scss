@@ -1,0 +1,38 @@
+.btn-with-icon {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  padding: 6px 24px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $neutral-white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $light-grey;
+  border-radius: 25px !important;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    svg {
+      transform: translateX(5px);
+    }
+  }
+
+  svg {
+    display: block;
+    flex: none;
+    fill: $main-green;
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    transition: $transition;
+  }
+}

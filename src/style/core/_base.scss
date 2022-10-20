@@ -13,13 +13,10 @@ body {
 
 html {
   font-family: $font;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.1;
   color: $neutral-grey;
-
-  @include responsive-font(18, 12);
-  @include min(769) {
-    line-height: 1.2;
-  }
 }
 
 body {
@@ -70,10 +67,6 @@ h6 {
 
 p {
   margin: 0 0 10px 0;
-
-  strong {
-    font-family: $font-bold;
-  }
 }
 
 a {
@@ -93,21 +86,21 @@ ul {
   }
 }
 
-ul {
-  li {
-    // путь к кастомной картинке пункта ul
-    // list-style-image: url('../img/ul.png');
-  }
-}
+//ul {
+//  li {
+//    // путь к кастомной картинке пункта ul
+//    // list-style-image: url('../img/ul.png');
+//  }
+//}
 
 //кастомные пункты списка с цифрами
-ol {
-  // list-style: none;
-  // @include counter(li);
-  li::before {
-    // color: $brand;
-  }
-}
+//ol {
+//  // list-style: none;
+//  // @include counter(li);
+//  li::before {
+//    // color: $brand;
+//  }
+//}
 
 input,
 textarea,
@@ -117,24 +110,24 @@ button {
   outline: none;
 }
 
-input {
-  padding: 3px 10px 5px 10px;
-  color: $neutral-grey;
-  border: 1px solid $neutral-grey;
-
-  @include placeholder-color($neutral-grey);
-}
+//input {
+//  padding: 3px 10px 5px 10px;
+//  color: $neutral-grey;
+//  border: 1px solid $neutral-grey;
+//
+//  @include placeholder-color($neutral-grey);
+//}
 
 textarea {
   resize: none;
 }
 
-input.error,
-textarea.error {
-  border-color: #ed1b24 !important;
-  background: #fbd1d3 !important;
-}
-
+//input.error,
+//textarea.error {
+//  border-color: #ed1b24 !important;
+//  background: #fbd1d3 !important;
+//}
+//
 svg {
   display: block;
   overflow: visible;
@@ -143,19 +136,16 @@ svg {
 //изменяем цвет выделения текста мышью
 ::selection {
   color: $dark-green;
-  background-color: $main-green;
+  background-color: $fresh-mint;
   text-shadow: none;
 }
 
 .main-wrap {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 
   -webkit-overflow-scrolling: touch;
-
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {
@@ -172,7 +162,7 @@ svg {
   @include min(769) {
     padding: 0 40px;
   }
-  @include min(1025) {
+  @include min(1200) {
     padding: 0 80px;
   }
 }

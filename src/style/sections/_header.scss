@@ -1,0 +1,148 @@
+.header {
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 17px 0;
+  transition: $transition;
+  background-color: transparent;
+
+  @include min(1025) {
+    position: absolute;
+    height: auto;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    content: '';
+    transition: $transition;
+    pointer-events: none;
+    opacity: 0;
+    background-image: url('../img/bg-top.svg');
+    background-position: 50% 50%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include min(1025) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: auto;
+    }
+  }
+
+  &.open {
+    background-color: $dark-green;
+
+    &::before {
+      opacity: .3;
+    }
+
+    .menu {
+      transition: .5s .4s;
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    .header__right {
+      transition: .5s .8s;
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.header--transparent {
+  .logo__text {
+    fill: $neutral-white;
+  }
+}
+
+//.header--not-transparent {
+//  .logo__text {
+//    fill: $dark-green;
+//  }
+//}
+//
+
+.header__right {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  //transition: opacity .5s .5s;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+  //transition-duration: .5s;
+  //transition-delay: .5s;
+
+  @include min(1025) {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.header__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+
+  @include min(1025) {
+    width: 32px;
+  }
+
+  svg {
+    flex: none;
+    fill: $neutral-white;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.header__login-text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  padding-left: 23px;
+  white-space: nowrap;
+  color: $neutral-white;
+
+  @include min(1025) {
+    display: none;
+  }
+}
+
+.header__partner-btn {
+  margin-bottom: 35px;
+
+  @include min(1025) {
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+  @include min(1200) {
+    margin-left: 30px;
+  }
+}
