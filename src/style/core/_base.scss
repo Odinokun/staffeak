@@ -135,6 +135,22 @@ svg {
   overflow: visible;
 }
 
+.blockquote{
+  padding-left: 52px;
+  background-image: url('../img/blockquote.svg');
+  background-size: 20px 16px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  span {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.1;
+    color: $neutral-grey;
+  }
+}
+
 //изменяем цвет выделения текста мышью
 ::selection {
   color: $dark-green;

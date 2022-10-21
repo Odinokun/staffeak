@@ -1,0 +1,105 @@
+.registr-sec {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(162, 242, 192, .15);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: '';
+    transition: $transition;
+    pointer-events: none;
+    opacity: .05;
+    background-image: url('../img/bg-top.svg');
+    background-position: 50% 50%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include min(769) {
+      flex-direction: row;
+    }
+  }
+}
+
+.registr-sec__sliders {
+  position: relative;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+
+  @include min(769) {
+    width: 320px;
+    min-height: 700px;
+    margin: 0 auto;
+  }
+}
+
+.registr-sec__right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 65px;
+
+  @include min(769) {
+    width: 50%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+  }
+  @include min(1025) {
+    padding-left: 0;
+  }
+}
+
+.registr-sec__title {
+  font-family: $font;
+  font-size: 44px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: $dark-green;
+
+  @include responsive-font(44, 32);
+
+  span {
+    display: block;
+    background: linear-gradient(90deg, #0ad582 0%, #a2f2c0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+}
+
+.registr-sec__subtitle {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 22px;
+  margin-bottom: 40px;
+  color: $dark-green;
+}
+
+.registr-sec__btn {
+  width: 100%;
+  max-width: 188px;
+  margin-bottom: 75px;
+
+  svg {
+    fill: $main-green;
+  }
+}
+
+.registr-sec__blockquote {
+  margin-top: auto;
+}
