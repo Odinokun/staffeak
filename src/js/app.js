@@ -3,6 +3,7 @@ $(function() {
   require('./modules/svg4everybody')();
   require('./modules/menu')();
   require('./modules/swiper')();
+  require('./modules/_text-anim')();
 
 
   // begin phone mask

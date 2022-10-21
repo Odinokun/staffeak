@@ -1,0 +1,40 @@
+.text-anim {
+  overflow: hidden;
+  padding-bottom: 120px;
+
+  @include min(769) {
+    padding-bottom: 200px;
+  }
+
+  &.active {
+    .text-anim__row {
+      transform: translateX(0);
+    }
+  }
+}
+
+.text-anim__row {
+  font-family: $font;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.1;
+  transition: 1.5s;
+  text-align: center;
+
+  @include responsive-font(72, 40);
+}
+
+.text-anim__row--left {
+  transform: translateX(-100vw);
+  color: $deep-green;
+}
+
+.text-anim__row--righ {
+  transform: translateX(100vw);
+  background: linear-gradient(90deg, #0ad582 0%, #a2f2c0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
