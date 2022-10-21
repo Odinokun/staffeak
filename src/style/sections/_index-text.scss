@@ -1,37 +1,47 @@
-.index-text{
-  .container{
-      padding-top: 100px;
-      padding-bottom: 90px;
+.index-text {
+  .container {
+    padding-top: 100px;
+    padding-bottom: 90px;
+
     @include min(769) {
-    padding-top: 120px;
-    padding-bottom: 120px;
+      padding-top: 120px;
+      padding-bottom: 120px;
     }
   }
 }
-.index-text__title{
+
+.index-text__title {
   font-family: $font;
-  font-style: normal;
   font-weight: 400;
-@include responsive-font(44, 32);
+  font-style: normal;
   line-height: 1.2;
-  color: $deep-green;
   margin-bottom: 30px;
+  color: $deep-green;
+
+  @include responsive-font(44, 32);
 }
-.index-text__footer{
-  display: flex;align-items: center;
+
+.index-text__footer {
+  display: flex;
+  align-items: center;
 }
-.index-text__footer-ava{
+
+.index-text__footer-ava {
   flex: none;
   margin-right: 10px;
+
   img {
-    display: block;max-width: 100%;
+    display: block;
+    max-width: 100%;
   }
 }
-.index-text__footer-text{
+
+.index-text__footer-text {
   font-family: $font;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: 1.2;
   color: $neutral-grey;
+
   @include responsive-font(18, 12);
 }
