@@ -5,11 +5,13 @@ block variables
   - let description = 'Staffeak'
 
 block content
-  .main-wrap.no-js(style="background-color:#014750")
+  #main-wrap.main-wrap
     include ../sections/header-transparent
 
     //begin content
     main.main
+      include ../sections/top
+      include ../sections/second
 
     //end content
 

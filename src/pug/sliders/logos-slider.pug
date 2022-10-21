@@ -1,0 +1,31 @@
+mixin logosSlide(pic)
+  .swiper-slide.logos-slider__slide
+    img(src="assets/img/logos/logo-" + pic + ".svg" alt="logo")
+
+//BEGIN logos-slider-wrap
+.logos-slider-wrap
+  .logos-slider__title Trey are trusted Staffeak:
+
+  //BEGIN logos-slider
+  #logos-slider.logos-slider
+    .swiper-wrapper
+      +logosSlide('01')
+      +logosSlide('02')
+      +logosSlide('03')
+      +logosSlide('04')
+      +logosSlide('05')
+      +logosSlide('06')
+      +logosSlide('07')
+      +logosSlide('08')
+      +logosSlide('09')
+      +logosSlide('01')
+      +logosSlide('02')
+      +logosSlide('03')
+      +logosSlide('04')
+      +logosSlide('05')
+      +logosSlide('06')
+      +logosSlide('07')
+      +logosSlide('08')
+      +logosSlide('09')
+  //END   logos-slider
+//END   logos-slider-wrap

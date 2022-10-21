@@ -1,0 +1,36 @@
+.second-slider {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+
+  .swiper-pagination {
+    bottom: 30px;
+    text-align: left;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: $light-grey;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $main-green;
+  }
+}
+
+.second-slider__icon {
+  margin-bottom: 50px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.second-slider__text {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 22px;
+  color: $neutral-white;
+}

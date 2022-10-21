@@ -8,6 +8,7 @@
 @import 'elements/menu';
 @import 'elements/menu-btn';
 @import 'elements/btns';
+@import 'elements/search-main';
 
 //@import 'elements/burger';
 //@import 'elements/breadcrumbs';
@@ -16,7 +17,13 @@
 
 //section
 @import 'sections/header';
+@import 'sections/top';
+@import 'sections/second';
 //@import 'sections/footer';
+
+//sliders
+@import 'sliders/logos-slider';
+@import 'sliders/second-slider';
 
 //pages
 @import 'pages/index';

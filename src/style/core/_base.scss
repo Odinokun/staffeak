@@ -16,7 +16,7 @@ html {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.1;
-  color: $neutral-grey;
+  color: $deep-green;
 }
 
 body {
@@ -35,10 +35,12 @@ h6,
   margin: 0 0 10px 0;
 }
 
-.h1-italic {
+.italic {
   line-height: 1.1;
-
   @include responsive-font(50, 36);
+  font-family: $font-bold;
+  font-weight: 600;
+  font-style: italic;
 }
 
 h1,
@@ -146,6 +148,10 @@ svg {
   min-height: 100vh;
 
   -webkit-overflow-scrolling: touch;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .main {

@@ -1,4 +1,5 @@
 .header {
+  position: absolute;
   z-index: 100;
   top: 0;
   right: 0;
@@ -7,10 +8,10 @@
   height: 100vh;
   padding: 17px 0;
   transition: $transition;
+  pointer-events: none;
   background-color: transparent;
 
   @include min(1025) {
-    position: absolute;
     height: auto;
   }
 
@@ -43,6 +44,7 @@
   }
 
   &.open {
+    position: fixed;
     background-color: $dark-green;
 
     &::before {
@@ -69,24 +71,14 @@
   }
 }
 
-//.header--not-transparent {
-//  .logo__text {
-//    fill: $dark-green;
-//  }
-//}
-//
-
 .header__right {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
   padding-bottom: 20px;
-  //transition: opacity .5s .5s;
   transition: opacity .5s;
   pointer-events: none;
   opacity: 0;
-  //transition-duration: .5s;
-  //transition-delay: .5s;
 
   @include min(1025) {
     flex-direction: row;

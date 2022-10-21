@@ -1,0 +1,14 @@
+mixin secondSlide(icon, text)
+  .swiper-slide.second-slider__slide
+    .second-slider__icon
+      img(src="assets/img/second-slider-icon-" + icon + ".svg" alt="icon")
+    .second-slider__text #{text}
+
+//BEGIN second-slider
+#second-slider.second-slider
+  .swiper-wrapper
+    +secondSlide('01', 'We provide qualified and professional personnel - from office workers to medicine personal. All types of staff what you need')
+    +secondSlide('02', 'Actively recruit thousand’s of talented  professionals that are unable to see your job posts')
+    +secondSlide('03', 'We screen candidates and handle the time-consuming work, so that you can focus on hiring those who suit your needs best')
+  .swiper-pagination
+//END   second-slider

@@ -5,6 +5,7 @@ module.exports = function () {
 
     $(this).toggleClass('open');
     $('#header').toggleClass('open');
+    $('#main-wrap').toggleClass('no-scroll');
   })
 
 };
