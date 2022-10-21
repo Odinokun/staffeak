@@ -82,11 +82,8 @@
 /* end   SEARCH MAIN BTN */
 
 
-
 /* begin DIRECT BTN */
 .direct-btn {
-  height: 50px;
-  padding: 16px 24px;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -95,6 +92,8 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
+  padding: 16px 24px;
   cursor: pointer;
   user-select: none;
   white-space: nowrap;
@@ -117,8 +116,8 @@
     fill: $deep-green;
     width: 14px;
     height: 12px;
-    transition: $transition;
     margin-left: 10px;
+    transition: $transition;
   }
 }
 
