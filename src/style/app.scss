@@ -17,13 +17,14 @@
 
 //section
 @import 'sections/header';
+@import 'sections/header-transparent';
 @import 'sections/top';
 @import 'sections/second';
 @import 'sections/index-text';
 @import 'sections/why-we';
 @import 'sections/text-anim';
 @import 'sections/regisrt-sec';
-//@import 'sections/footer';
+@import 'sections/footer';
 
 //sliders
 @import 'sliders/logos-slider';
@@ -32,4 +33,4 @@
 
 //pages
 @import 'pages/index';
-@import 'pages/inner';
+@import 'pages/how-it-works';

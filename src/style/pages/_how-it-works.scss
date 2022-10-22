@@ -1,0 +1,250 @@
+.how-it-page-top {
+  position: relative;
+  background-color: $neutral-white;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &::before {
+    opacity: .05;
+    background-size: cover;
+  }
+}
+
+.how-it-page-top__title {
+  text-align: center;
+}
+
+.how-it-page-top__tab-btns {
+  display: flex;
+  overflow: hidden;
+  border-radius: 32px;
+  background-color: #fff;
+}
+
+.how-it-page-top__tab-btn {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  height: 54px;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 32px;
+
+  @include min(600) {
+    height: 64px;
+    padding: 5px 20px 5px 30px;
+  }
+
+  &:first-child {
+    @include min(600) {
+      margin-right: 20px;
+    }
+  }
+
+  &.active {
+    pointer-events: none;
+
+    &::before {
+      opacity: 1;
+    }
+
+    svg {
+      fill: $deep-green;
+    }
+
+    span {
+      color: $deep-green;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    transition: $transition;
+    pointer-events: none;
+    opacity: 0;
+    background-image: $gradient;
+  }
+
+  span {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1;
+    position: relative;
+    display: block;
+    user-select: none;
+    color: $neutral-grey;
+  }
+
+  svg {
+    position: relative;
+    flex: none;
+    fill: $light-grey;
+    width: 16px;
+    height: 16px;
+    margin-left: 12px;
+    transition: $transition;
+
+    @include min(600) {
+      width: 24px;
+      height: 24px;
+      margin-left: 32px;
+    }
+  }
+}
+
+/* begin TABS */
+.how-it-page-tabs {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  @include min(769) {
+    padding-bottom: 120px;
+  }
+}
+
+.how-it-page-tab {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.how-it-page-tab__row {
+  border-bottom: 1px solid $light-grey;
+
+  &:first-child {
+    border-top: 1px solid $light-grey;
+  }
+}
+
+.how-it-page-tab__header {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+
+  @include min(769) {
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+
+  &.active {
+    .how-it-page-tab__header-btn {
+      border-color: $main-green;
+
+      &::before {
+        transform: rotate(0deg);
+        background-color: $main-green;
+      }
+
+      &::after {
+        background-color: $main-green;
+      }
+    }
+  }
+}
+
+.how-it-page-tab__header-text {
+  font-weight: 500;
+  line-height: 1.2;
+  color: $dark-green;
+
+  @include responsive-font(20, 18);
+
+  p {
+    margin: 0;
+  }
+}
+
+.how-it-page-tab__header-btn {
+  position: relative;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  transition: .5s;
+  border: 2px solid $dark-green;
+  border-radius: 50%;
+
+  @include min(769) {
+    width: 50px;
+    height: 50px;
+    margin-right: 55px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 2px;
+    margin: auto;
+    content: '';
+    transition: .5s;
+    background-color: $dark-green;
+
+    @include min(769) {
+      width: 20px;
+    }
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.how-it-page-tab__body {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  display: none;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  color: $neutral-grey;
+
+  @include min(769) {
+    padding-bottom: 30px;
+    padding-left: 105px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+/* end   TABS */
+
+.how-it-page-tabs__direct-btn {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  transform: translateY(50%);
+
+  @include min(1200) {
+    top: 0;
+    right: 40px;
+    bottom: 0;
+    margin: auto;
+  }
+}

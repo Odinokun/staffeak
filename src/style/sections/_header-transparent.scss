@@ -1,0 +1,20 @@
+.header--transparent {
+  .logo__text {
+    fill: $neutral-white;
+  }
+
+  .menu__link {
+    color: $neutral-white;
+  }
+
+  .header__login {
+    svg {
+      fill: $neutral-white;
+    }
+  }
+
+  .header__partner-btn {
+    color: $neutral-white;
+    border-color: $light-grey;
+  }
+}

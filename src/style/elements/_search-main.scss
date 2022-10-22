@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 500px;
+  margin-bottom: 30px;
   padding: 1px;
   border-radius: 32px;
   background-color: transparent;
@@ -83,6 +84,7 @@
     padding-right: 30px;
     padding-left: 20px;
     text-overflow: ellipsis;
+    color: $neutral-grey;
     border: none;
 
     -webkit-appearance: none;

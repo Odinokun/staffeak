@@ -1,0 +1,68 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+mixin tab(title1, title2)
+  .how-it-page-tab__row
+    .how-it-page-tab__header
+      .how-it-page-tab__header-btn
+      .how-it-page-tab__header-text
+        p #{title1}
+        p #{title2}
+    .how-it-page-tab__body
+      p Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //BEGIN how-it-page-top
+      .page-top.bg-rounds.how-it-page-top
+        .container
+          h2.page-top__title.how-it-page-top__title How It Works
+          .how-it-page-top__tab-btns
+            .how-it-page-top__tab-btn.active(data-tab='01')
+              span Employers
+              +svg('lock')
+            .how-it-page-top__tab-btn(data-tab='02')
+              span Contractors
+              +svg('contractor')
+      //END   how-it-page-top
+
+      //BEGIN how-it-page-tabs
+      .how-it-page-tabs
+        .container
+          //BEGIN how-it-page-tab
+          #how-it-page-tab--01.how-it-page-tab.active
+            +tab('I found a person for a temp assignment, but now I want to hire him/her permanently.', 'Is there an additional cost or paperwork to be done?')
+            +tab('My dental hygienist just called out sick and I don’t want to reschedule all his/her patients.', 'Do I have enough time to find a replacement?')
+            +tab('Can I request the same dentist/hygienist/assistant again?', '')
+            +tab('I really liked my temp employee that I recruited from tempeak.', 'How can I put in a good word for him/her?')
+            +tab('Is my information and billing secure?', '')
+            +tab('Can I negotiate the rates?', '')
+            +tab('How do I deal with the payment?', '')
+          //END   how-it-page-tab
+          //BEGIN how-it-page-tab
+          #how-it-page-tab--02.how-it-page-tab
+            +tab('I found a person for a temp assignment, but now I want to hire him/her permanently.', 'Is there an additional cost or paperwork to be done?')
+            +tab('My dental hygienist just called out sick and I don’t want to reschedule all his/her patients.', 'Do I have enough time to find a replacement?')
+            +tab('Can I request the same dentist/hygienist/assistant again?', '')
+            +tab('I really liked my temp employee that I recruited from tempeak.', 'How can I put in a good word for him/her?')
+            +tab('Is my information and billing secure?', '')
+            +tab('Can I negotiate the rates?', '')
+            +tab('How do I deal with the payment?', '')
+          //END   how-it-page-tab
+
+        a(href="#").direct-btn.how-it-page-tabs__direct-btn
+          span Direct hire
+          +svg('arr-right')
+      //END   how-it-page-tabs
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

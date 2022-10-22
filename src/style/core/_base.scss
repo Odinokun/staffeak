@@ -36,11 +36,12 @@ h6,
 }
 
 .italic {
-  line-height: 1.1;
-  @include responsive-font(50, 36);
   font-family: $font-bold;
   font-weight: 600;
   font-style: italic;
+  line-height: 1.1;
+
+  @include responsive-font(50, 36);
 }
 
 h1,
@@ -135,17 +136,18 @@ svg {
   overflow: visible;
 }
 
-.blockquote{
+.blockquote {
   padding-left: 52px;
   background-image: url('../img/blockquote.svg');
-  background-size: 20px 16px;
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: 20px 16px;
+
   span {
     font-family: $font;
-    font-style: normal;
-    font-weight: 500;
     font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
     line-height: 1.1;
     color: $neutral-grey;
   }
@@ -186,5 +188,40 @@ svg {
   }
   @include min(1200) {
     padding: 0 80px;
+  }
+}
+
+.page-top {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.page-top__title {
+  font-family: $font;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: $dark-green;
+
+  @include responsive-font(44, 32);
+}
+
+.bg-rounds {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: '';
+    transition: $transition;
+    pointer-events: none;
+    opacity: 1;
+    background-image: url('../img/bg-top.svg');
+    background-position: 50% 50%;
   }
 }

@@ -93,6 +93,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  box-shadow: 0 12px 48px rgba(8, 28, 34, .16);
   padding: 16px 24px;
   cursor: pointer;
   user-select: none;
@@ -102,7 +103,18 @@
   border: none;
   border-radius: 30px !important;
   background: $gradient;
-  box-shadow: none;
+
+  &::before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-color: $fresh-mint;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 1px;
+    left: 0;
+  }
 
   &:hover {
     svg {

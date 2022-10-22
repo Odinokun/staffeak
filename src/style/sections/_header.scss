@@ -51,10 +51,29 @@
       opacity: .3;
     }
 
+    .logo__text {
+      fill: $neutral-white;
+    }
+
     .menu {
       transition: .5s .4s;
       pointer-events: auto;
       opacity: 1;
+    }
+
+    .menu__link {
+      color: $neutral-white;
+    }
+
+    .header__login {
+      svg {
+        fill: $neutral-white;
+      }
+    }
+
+    .header__partner-btn {
+      color: $neutral-white;
+      border-color: $light-grey;
     }
 
     .header__right {
@@ -65,21 +84,18 @@
   }
 }
 
-.header--transparent {
-  .logo__text {
-    fill: $neutral-white;
-  }
-}
-
 .header__right {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   transition: opacity .5s;
   pointer-events: none;
   opacity: 0;
 
+  @include min(600) {
+    padding-bottom: 20px;
+  }
   @include min(1025) {
     flex-direction: row;
     align-items: center;
@@ -108,7 +124,7 @@
 
   svg {
     flex: none;
-    fill: $neutral-white;
+    fill: $dark-green;
     width: 20px;
     height: 20px;
   }
@@ -129,6 +145,8 @@
 
 .header__partner-btn {
   margin-bottom: 35px;
+  color: $dark-green;
+  border-color: $dark-green;
 
   @include min(1025) {
     margin-bottom: 0;

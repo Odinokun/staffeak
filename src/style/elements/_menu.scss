@@ -14,10 +14,13 @@
 .menu__list {
   display: flex;
   flex-direction: column;
-  margin: 0 0 95px 0;
+  margin: 0 0 40px 0;
   padding: 0;
   list-style: none;
 
+  @include min(600) {
+    margin: 0 0 95px 0;
+  }
   @include min(1025) {
     flex-direction: row;
     margin-bottom: 0;
@@ -43,7 +46,7 @@
   line-height: 1.1;
   white-space: nowrap;
   text-decoration: none;
-  color: $neutral-white;
+  color: $dark-green;
 
   @include min(1025) {
     font-size: 12px;

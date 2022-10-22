@@ -49,7 +49,6 @@
   height: 20px;
   padding-right: 16px;
   transition: $transition;
-  border-right: 1px solid $light-grey;
 
   svg {
     fill: $main-green;
@@ -73,9 +72,28 @@
   transition: $transition;
   white-space: nowrap;
   text-transform: uppercase;
-  color: $deep-green;
 }
 
 .menu-btn--white {
   background-color: $neutral-white;
+
+  .menu-btn__icon {
+    border-right: 1px solid $light-grey;
+  }
+
+  .menu-btn__text {
+    color: $deep-green;
+  }
+}
+
+.menu-btn--dark {
+  background-color: $deep-green;
+
+  .menu-btn__icon {
+    border-right: 1px solid rgba(162, 242, 192, .25);
+  }
+
+  .menu-btn__text {
+    color: $neutral-white;
+  }
 }
