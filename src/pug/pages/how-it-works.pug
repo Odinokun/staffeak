@@ -20,7 +20,7 @@ block content
 
     //begin content
     main.main
-      //BEGIN how-it-page-top
+      //BEGIN page-top
       .page-top.bg-rounds.how-it-page-top
         .container
           h2.page-top__title.how-it-page-top__title How It Works
@@ -31,7 +31,7 @@ block content
             .how-it-page-top__tab-btn(data-tab='02')
               span Contractors
               +svg('contractor')
-      //END   how-it-page-top
+      //END   page-top
 
       //BEGIN how-it-page-tabs
       .how-it-page-tabs
@@ -57,7 +57,7 @@ block content
             +tab('How do I deal with the payment?', '')
           //END   how-it-page-tab
 
-        a(href="#").direct-btn.how-it-page-tabs__direct-btn
+        a(href="#").direct-btn.active.how-it-page-tabs__direct-btn
           span Direct hire
           +svg('arr-right')
       //END   how-it-page-tabs

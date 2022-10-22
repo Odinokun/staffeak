@@ -1,0 +1,71 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+mixin item(icon, period, cost)
+  .pricing__item
+    .pricing__icon
+      img(src="assets/img/pricing-icon-" + icon + ".svg" alt="icon")
+    .pricing__period #{period}
+    .pricing__cost #{cost}
+    .pricing__often per month
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .pricing.bg-rounds
+        //BEGIN page-top
+        .page-top.pricing__page-top
+          .container
+            h2.page-top__title.pricing__page-top-title Pricing
+        //END   page-top
+
+        //BEGIN pricing body
+        .pricing__body
+          .container
+            //BEGIN pricing__left
+            .pricing__left
+              .pricing__header
+                .pricing__header-title For contractors
+              //BEGIN pricing__list
+              .pricing__list
+                +item('01', 'Forever', 'Free')
+              //END   pricing__list
+            //END   pricing__left
+
+            //BEGIN pricing__right
+            .pricing__right
+              .pricing__header
+                .pricing__header-title For business owners
+              //BEGIN pricing__list
+              .pricing__list
+                +item('02', '3 month', '$99.99')
+                +item('03', '6 month', '$89.99')
+                +item('04', '12 month', '$79.99')
+              //END   pricing__list
+            //END   pricing__right
+        //END   pricing body
+
+        //BEGIN pricing__footer
+        .pricing__footer
+          .container
+            .pricing__footer-text Have you chosen optimal pricing? You can <a href="#">start registration</a>
+        //END   pricing__footer
+
+        a(href="#").direct-btn.active.pricing__direct-btn
+          span Direct hire
+          +svg('arr-right')
+
+
+
+
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

@@ -4,7 +4,8 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'how-it-works'
+    'how-it-works',
+    'pricing',
     ]);
 });
 
