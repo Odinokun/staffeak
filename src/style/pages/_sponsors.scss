@@ -1,0 +1,131 @@
+.sponsors-page-top {
+  position: relative;
+  padding-top: 100px;
+  background-color: $neutral-white;
+
+  @include min(769) {
+    padding-top: 212px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include min(600) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &::before {
+    opacity: .05;
+    background-size: cover;
+  }
+}
+
+.sponsors-page-top__btn {
+  //width: 100%;
+  //box-shadow: none;
+  //max-width: 400px;
+  //min-width: 280px;
+  //svg {
+  //  fill: $main-green
+  //}
+}
+
+//
+.sponsors-page-top__title {
+  margin-bottom: 25px;
+  padding-right: 0;
+
+  @include min(600) {
+    margin-bottom: 0;
+    padding-right: 30px;
+  }
+}
+
+.sponsors__slider {
+  overflow: hidden;
+  padding-bottom: 100px;
+
+  .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: $fresh-mint;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $main-green;
+  }
+}
+
+.sponsors {
+  padding-top: 50px;
+  padding-bottom: 120px;
+}
+
+.sponsors__row {
+  display: flex;
+  //align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $light-grey;
+
+  &:first-child {
+    border-top: 1px solid $light-grey;
+  }
+}
+
+.sponsors__logo {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 80px;
+  height: 85px;
+  margin-right: 18px;
+  border: 1px solid $light-grey;
+  border-radius: 16px;
+
+  @include min(769) {
+    width: 170px;
+    height: 180px;
+    margin-right: 38px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.sponsors__descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sponsors__title {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: $dark-green;
+
+  @include responsive-font(24, 20);
+  @include min(769) {
+    margin-bottom: 24px;
+  }
+}
+
+.sponsors__text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: $neutral-grey;
+}

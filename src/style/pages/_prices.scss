@@ -7,7 +7,7 @@
   }
 }
 
-.pricing__page-top-title {
+.pricing-page-top__title {
   margin-bottom: 20px;
   text-align: center;
 
@@ -192,18 +192,5 @@
   a {
     text-decoration: underline;
     color: $main-green;
-  }
-}
-
-.pricing__direct-btn {
-  position: absolute;
-  right: 15px;
-  bottom: 0;
-  transform: translateY(50%);
-
-  @include min(941) {
-    right: 40px;
-    bottom: 40px;
-    transform: translateY(0);
   }
 }

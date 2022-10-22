@@ -10,6 +10,9 @@
 @import 'elements/btns';
 @import 'elements/search-main';
 
+//buttons
+@import "elements/buttons/direct-btn";
+
 //@import 'elements/burger';
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
@@ -35,3 +38,4 @@
 @import 'pages/index';
 @import 'pages/how-it-works';
 @import 'pages/prices';
+@import 'pages/sponsors';

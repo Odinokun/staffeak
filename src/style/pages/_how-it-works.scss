@@ -15,6 +15,7 @@
 }
 
 .how-it-page-top__title {
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -232,19 +233,4 @@
   }
 }
 
-
 /* end   TABS */
-
-.how-it-page-tabs__direct-btn {
-  position: absolute;
-  right: 15px;
-  bottom: 0;
-  transform: translateY(50%);
-
-  @include min(1200) {
-    top: 0;
-    right: 40px;
-    bottom: 0;
-    margin: auto;
-  }
-}

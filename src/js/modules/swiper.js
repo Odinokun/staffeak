@@ -82,6 +82,13 @@ module.exports = function () {
     }
   });
 
+  const sponsorsSlider = new Swiper('#sponsors__slider', {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    grabCursor: true,
+  });
 
   //******************************
   //***** TEMP SLIDERS *************

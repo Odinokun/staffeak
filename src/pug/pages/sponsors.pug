@@ -1,0 +1,63 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+mixin sponsor(logo, title, text)
+  .sponsors__row
+    .sponsors__logo
+      img(src="assets/img/sponsors/sponsor-" + logo + ".svg" alt="logo")
+    .sponsors__descr
+      .sponsors__title #{title}
+      .sponsors__text #{text}
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.sponsors-page-top
+        .container
+          h2.page-top__title.sponsors-page-top__title Sponsors
+          a(href="#").cta-btn.sponsors-page-top__cta-btn
+            span Become a sponsor
+            +svg('arr-right').how-it-page-top__tab-btn
+      //END   page-top
+
+
+      //BEGIN sponsors
+      .sponsors
+        .container
+          #sponsors__slider.sponsors__slider
+            .swiper-wrapper
+              .swiper-slide.sponsors__slide
+                +sponsor('01', 'Massive Dynamic', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('02', 'Acme Corporation', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. ')
+                +sponsor('03', 'The New York Inquirer', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('04', 'Cyberdyne Systems', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('01', 'Massive Dynamic', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('02', 'Acme Corporation', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. ')
+              .swiper-slide.sponsors__slide
+                +sponsor('02', 'Acme Corporation', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. ')
+                +sponsor('04', 'Cyberdyne Systems', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('01', 'Massive Dynamic', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('02', 'Acme Corporation', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. ')
+                +sponsor('01', 'Massive Dynamic', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('03', 'The New York Inquirer', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+              .swiper-slide.sponsors__slide
+                +sponsor('04', 'Cyberdyne Systems', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('03', 'The New York Inquirer', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('02', 'Acme Corporation', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. ')
+                +sponsor('01', 'Massive Dynamic', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+                +sponsor('03', 'The New York Inquirer', 'Yes. You can replace your missing staff instantly. Search tempeak’s database of available hygienists, dentists, and dental assistants. When you’ve found who you’re looking for, send a job request to couple of them. You can choose anyone who accepts your assignment. You’ll be fully staffed and ready to go in no time.')
+            .swiper-pagination
+      //END   sponsors
+
+      include ../elements/buttons/direct-btn
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

@@ -81,9 +81,8 @@
 
 /* end   SEARCH MAIN BTN */
 
-
-/* begin DIRECT BTN */
-.direct-btn {
+/* begin CTA BTN */
+.cta-btn {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -93,6 +92,9 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  min-width: 280px;
+  max-width: 400px;
   height: 50px;
   padding: 16px 24px;
   cursor: pointer;
@@ -103,7 +105,8 @@
   border: none;
   border-radius: 30px !important;
   background: $gradient;
-  box-shadow: 0 12px 48px rgba(8, 28, 34, .16);
+  box-shadow: none;
+
 
   &.active {
     &::before {
@@ -119,7 +122,6 @@
     }
   }
 
-
   &:hover {
     svg {
       transform: translateX(5px);
@@ -129,7 +131,7 @@
   svg {
     display: block;
     flex: none;
-    fill: $deep-green;
+    fill: $main-green;
     width: 14px;
     height: 12px;
     margin-left: 10px;
@@ -137,4 +139,4 @@
   }
 }
 
-/* end   DIRECT BTN */
+/* end   CTA BTN */

@@ -6,6 +6,7 @@ $(document).ready(function ($) {
     'index',
     'how-it-works',
     'pricing',
+    'sponsors',
     ]);
 });
 

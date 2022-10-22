@@ -173,6 +173,8 @@ svg {
 }
 
 .main {
+  position: relative;
+
   flex-grow: 1;
 }
 
@@ -188,6 +190,7 @@ svg {
   }
   @include min(1200) {
     padding: 0 80px;
+    //padding: 0 220px;
   }
 }
 
@@ -201,7 +204,7 @@ svg {
   font-weight: 500;
   font-style: normal;
   line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   color: $dark-green;
 
   @include responsive-font(44, 32);

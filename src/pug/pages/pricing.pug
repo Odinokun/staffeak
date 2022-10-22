@@ -20,9 +20,9 @@ block content
     main.main
       .pricing.bg-rounds
         //BEGIN page-top
-        .page-top.pricing__page-top
+        .page-top.pricing-page-top
           .container
-            h2.page-top__title.pricing__page-top-title Pricing
+            h2.page-top__title.pricing-page-top__title Pricing
         //END   page-top
 
         //BEGIN pricing body
@@ -57,14 +57,7 @@ block content
             .pricing__footer-text Have you chosen optimal pricing? You can <a href="#">start registration</a>
         //END   pricing__footer
 
-        a(href="#").direct-btn.active.pricing__direct-btn
-          span Direct hire
-          +svg('arr-right')
-
-
-
-
-
+        include ../elements/buttons/direct-btn
     //end content
 
     include ../sections/footer
