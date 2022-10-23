@@ -37,10 +37,18 @@ block content
 
             //BEGIN sign-up__form
             form.sign-up__form
-              //TODO error placeholders
-              input(placeholder='Email').input.sign-up__input.error
-              input(placeholder='Password' type='password').input.sign-up__input
-              input(placeholder='Confirm password' type='password').input.sign-up__input
+              .input.sign-up__input.error
+                input(placeholder='Email')
+                span Email
+                span Some error text
+              .input.sign-up__input
+                input(placeholder='Password' type='password')
+                span Password
+                span Some error text
+              .input.sign-up__input
+                input(placeholder='Confirm password' type='password')
+                span Confirm password
+                span Some error text
               .sign-up__agree
                 .sign-up__agree-checkbox.error
                   input(type="checkbox")

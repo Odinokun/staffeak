@@ -23,8 +23,14 @@ block content
 
             //BEGIN sign-up__form
             form.sign-up__form
-              input(placeholder='Email').input.sign-up__input
-              input(placeholder='Password' type='password').input.sign-up__input
+              .input.sign-up__input
+                input(type='text' placeholder="Email")
+                span Email
+                span Some error text
+              .input.sign-up__input
+                input(placeholder='Password' type='password')
+                span Password
+                span Some error text
               button.cta-btn.sign-up__cta-btn
                 span Sing up
                 +svg('arr-right')

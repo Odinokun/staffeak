@@ -113,34 +113,76 @@ button {
   outline: none;
 }
 
-input,
-textarea,
-select {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 110%;
-  overflow: hidden;
-  width: 100%;
-  height: 54px;
-  padding: 5px 24px;
-  text-overflow: ellipsis;
-  color: $neutral-grey;
-  border: 1px solid $light-grey;
-  border-radius: 28px !important;
-  background: $neutral-white;
+.input,
+.textarea,
+.select {
+  position: relative;
 
-  @include placeholder-color($neutral-grey);
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 110%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 54px;
+    padding: 2px 24px 2px 24px;
+    transition: .5s;
+    text-overflow: ellipsis;
+    color: $dark-green;
+    border: 1px solid $light-grey;
+    border-radius: 28px !important;
+    background: $neutral-white;
+
+    @include placeholder-color($neutral-grey);
+  }
+
+  span {
+    font-family: $font;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    display: block;
+    transition: .5s;
+    pointer-events: none;
+    opacity: 0;
+    color: $neutral-grey;
+  }
 }
 
-textarea {
-  min-height: 100px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  resize: none;
+.input.active input,
+.textarea.active textarea,
+.select.active select {
+  padding: 15px 24px 2px 24px;
+  color: $dark-green;
+
+  & + span {
+    opacity: 1;
+  }
 }
 
-select {
+.textarea {
+  textarea {
+    min-height: 100px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    resize: none;
+  }
+
+  &.active textarea {
+    padding-top: 23px;
+  }
+}
+
+.select select {
+  padding-top: 4px;
   padding-left: 23px;
+  color: #63767e;
 
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -150,9 +192,20 @@ select::-ms-expand {
   display: none;
 }
 
-input.error,
-textarea.error {
+.input.error input,
+.textarea.error textarea,
+.select.error select {
+  padding: 15px 24px 2px 24px;
   border-color: $error !important;
+
+  & + span {
+    opacity: 0;
+
+    & + span {
+      opacity: 1;
+      color: $error;
+    }
+  }
 }
 
 svg {

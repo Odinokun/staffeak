@@ -68,12 +68,12 @@
       content: '';
       transition: $transition;
       transform: scale(0);
-      background-color: $neutral-white;
+      background-color: $dark-green;
     }
   }
 
   &:hover {
-    color: $neutral-white;
+    //color: $neutral-white;
 
     &::before {
       transform: scale(1);

@@ -36,14 +36,29 @@ block content
 
             //BEGIN contacts__form
             form.contacts__form
-              select.select.contacts__form-select
-                option(value="Subject") Subject
-                option(value="Subject 1") Subject 1
-                option(value="Subject 2") Subject 2
-              input(placeholder='Email Address').input.contacts__form-input
-              input(placeholder='Your Name').input.contacts__form-input
-              input(placeholder='Phone').input.contacts__form-input
-              textarea(placeholder='Message').textarea.contacts__form-textarea
+              .select.contacts__form-select
+                select
+                  option(value="Subject") Subject
+                  option(value="Subject 1") Subject 1
+                  option(value="Subject 2") Subject 2
+                span Subject
+                span Some error text
+              .input.contacts__form-input
+                input(placeholder='Email Address')
+                span Email Address
+                span Some error text
+              .input.contacts__form-input
+                input(placeholder='Your Name')
+                span Your Name
+                span Some error text
+              .input.contacts__form-input
+                input(placeholder='Phone')
+                span Phone
+                span Some error text
+              .textarea.contacts__form-textarea
+                textarea(placeholder='Message')
+                span Message
+                span Some error text
               button.cta-btn.contacts__cta-btn
                 span Send message
                 +svg('arr-right')

@@ -5,6 +5,10 @@
 
   .menu__link {
     color: $neutral-white;
+
+    &::before {
+      background-color: $neutral-white;
+    }
   }
 
   .header__login {
