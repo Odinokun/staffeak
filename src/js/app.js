@@ -8,6 +8,7 @@ $(function() {
   require('./modules/accordion')();
   require('./modules/popup')();
   require('./modules/input-placeholder')();
+  require('./modules/restore')();
 
 
   // begin phone mask

@@ -140,3 +140,74 @@
 }
 
 /* end   CTA BTN */
+
+
+/* begin RESTORE */
+.restore-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 240px;
+  height: 54px;
+  padding: 16px 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $deep-green;
+  border: 2px solid $deep-green;
+  border-radius: 30px !important;
+  background: transparent;
+  box-shadow: none;
+
+  &::before {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: 54px;
+    margin: auto;
+    content: '';
+    transition: .5s;
+    opacity: 0;
+    border-radius: 30px;
+    background-image: $gradient;
+  }
+
+  &:hover {
+    border-color: transparent;
+
+    &::before {
+      opacity: 1;
+    }
+
+    svg {
+      fill: $main-green;
+    }
+  }
+
+  span {
+    position: relative;
+  }
+
+  svg {
+    position: relative;
+    display: block;
+    flex: none;
+    fill: $deep-green;
+    width: 14px;
+    height: 12px;
+    margin-left: 10px;
+    transition: .5s;
+  }
+}
+
+/* end   RESTORE */

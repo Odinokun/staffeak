@@ -13,6 +13,8 @@ $(document).ready(function ($) {
     'new-password',
     'reset',
     'reset-confirm',
+    'restore',
+    'delete',
     ]);
 });
 

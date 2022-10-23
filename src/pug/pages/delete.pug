@@ -1,0 +1,33 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .restore.bg-rounds
+        .container
+          #restore__smile-wrap.restore__smile-wrap
+            .restore__smile.active#restore__smile-base
+              img(src="assets/img/restore.svg" alt="smile")
+            .restore__smile#restore__smile-no
+              img(src="assets/img/restore-no.svg" alt="smile")
+            .restore__smile#restore__smile-yes
+              img(src="assets/img/restore-yes.svg" alt="smile")
+          h2.restore__title.page-top__title Would you like to delete your profile?
+          .restore__btns
+            button.restore-btn.restore__btn(data-smile="yes")
+              span No
+              +svg('arr-right')
+            button.restore-btn.restore__btn(data-smile="no")
+              span Yes
+              +svg('arr-right')
+    //end content
+
+    include ../elements/popups
+    include ../sections/scripts
