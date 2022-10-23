@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     'pricing',
     'sponsors',
     'contacts',
+    'sign-up',
     ]);
 });
 

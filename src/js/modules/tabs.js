@@ -14,4 +14,19 @@ module.exports = function () {
   })
   //end HOW IT WORKS
 
+  //begin SIGN IN
+  $('.sign-up__tabs-btn').on('click', function (e) {
+    e.preventDefault();
+    const activeVal = $(this).data('tab');
+    const page = $('.sign-up');
+
+    $('.sign-up__tabs-btn').removeClass('active');
+    $(page).removeClass('sign-up--bo');
+    $(page).removeClass('sign-up--co');
+
+    $(this).addClass('active');
+    $(page).addClass(activeVal);
+  })
+  //end SIGN IN
+
 };

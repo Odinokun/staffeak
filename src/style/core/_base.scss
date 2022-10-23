@@ -150,12 +150,11 @@ select::-ms-expand {
   display: none;
 }
 
-//input.error,
-//textarea.error {
-//  border-color: #ed1b24 !important;
-//  background: #fbd1d3 !important;
-//}
-//
+input.error,
+textarea.error {
+  border-color: $error !important;
+}
+
 svg {
   display: block;
   overflow: visible;
@@ -282,11 +281,11 @@ svg {
 
 .double-page-container {
   max-width: 480px;
-  //max-width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
   @include min(769) {
+    margin: 0;
     padding: 0 40px;
   }
   @include min(1200) {

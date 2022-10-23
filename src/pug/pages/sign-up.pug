@@ -1,0 +1,70 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .sign-up.sign-up--bo.double-page
+        //BEGIN LEFT
+        .double-page__item.double-page__item--left
+          .double-page-blockquote Just few minutes and over <span>100,000</span> different businessin USA be openning for you. Let’s make first step.
+        //END   LEFT
+
+        //BEGIN RIGHT
+        .double-page__item.double-page__item--right
+          .double-page-container
+            h2.sigh-up__title.sigh-up__title--bo Sign up <span>for Business Owner</span>
+            h2.sigh-up__title.sigh-up__title--co Sign up <span>for Contractor</span>
+
+            //BEGIN TABS
+            .sign-up__tabs
+              //BEGIN tabs-header
+              .sign-up__tabs-header
+                .sign-up__tabs-btn.active(data-tab="sign-up--bo")
+                  +svg('lock')
+                  span Business Owner
+                .sign-up__tabs-btn(data-tab="sign-up--co")
+                  +svg('contractor')
+                  span Contractor
+              //END   tabs-header
+            //END   TABS
+
+            //BEGIN sign-up__form
+            form.sign-up__form
+              //TODO error placeholders
+              input(placeholder='Email').input.sign-up__input.error
+              input(placeholder='Password' type='password').input.sign-up__input
+              input(placeholder='Confirm password' type='password').input.sign-up__input
+              .sign-up__agree
+                .sign-up__agree-checkbox.error
+                  input(type="checkbox")
+                  span
+                .sign-up__agree-text I agree to the <a href="#">Terms of Use</a>
+              button.cta-btn.sign-up__cta-btn
+                span Sing up
+                +svg('arr-right')
+            //END   sign-up__form
+
+            .sign-up__social-separate
+              span OR sign up with
+
+            //BEGIN SOCIAL
+            .sign-up__social
+              a(href="#").sign-up__social-link.sign-up__social-link--google Google
+              a(href="#").sign-up__social-link.sign-up__social-link--fb Facebook
+              a(href="#").sign-up__social-link.sign-up__social-link--apple Apple
+              a(href="#").sign-up__social-link.sign-up__social-link--linked Linked In
+            //END   SOCIAL
+
+            .sigh-up__login Already have an account? <a href="login.html">Log in</a>
+        //END   RIGHT
+    //end content
+
+    include ../elements/popups
+    include ../sections/scripts

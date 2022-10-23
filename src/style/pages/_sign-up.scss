@@ -1,0 +1,291 @@
+.sign-up--bo {
+  .double-page__item--left {
+    background-image: url('../img/bg-sign-up-bo.jpg');
+  }
+
+  .sigh-up__title--co {
+    display: none;
+  }
+}
+
+.sign-up--co {
+  .double-page__item--left {
+    background-image: url('../img/bg-sign-up-co.jpg');
+  }
+
+  .sigh-up__title--bo {
+    display: none;
+  }
+}
+
+.sigh-up__title {
+  font-family: $font;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-align: left;
+  color: $deep-green;
+
+  @include responsive-font(24, 20);
+  @include min(769) {
+    margin-bottom: 40px;
+  }
+
+  span {
+    color: $main-green;
+  }
+}
+
+/* begin TABS */
+.sign-up__tabs-header {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.sign-up__tabs-btn {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding-bottom: 16px;
+  cursor: pointer;
+  transition: $transition;
+  border-bottom: 2px solid $light-grey;
+
+  &:nth-child(2) {
+    padding-left: 20px;
+  }
+
+  &.active {
+    pointer-events: none;
+    border-bottom: 2px solid $main-green;
+
+    svg {
+      fill: $main-green;
+    }
+
+    span {
+      color: $dark-green;
+    }
+  }
+
+  svg {
+    flex: none;
+    fill: $light-grey;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: $transition;
+
+    @include min(375) {
+      margin-right: 14px;
+    }
+    @include min(1024) {
+      margin-right: 16px;
+    }
+  }
+
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.1;
+    user-select: none;
+    transition: $transition;
+    white-space: nowrap;
+    color: $neutral-grey;
+
+    @include min(375) {
+      font-size: 16px;
+    }
+  }
+}
+
+/* end   TABS */
+
+
+/* begin FORM */
+.sign-up__form {
+  margin-bottom: 30px;
+}
+
+.sign-up__input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sign-up__agree {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sign-up__agree-checkbox {
+  position: relative;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+
+  &.error span {
+    border-color: $error;
+  }
+
+  input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    background: $neutral-white;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 16px;
+      height: 12px;
+      margin: auto;
+      content: '';
+      transition: $transition;
+      opacity: 0;
+      background-image: url('../img/check.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+  }
+}
+
+.sign-up__agree-checkbox input:checked + span:before {
+  opacity: 1;
+}
+
+.sign-up__agree-text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2;
+  color: $neutral-grey;
+
+  a {
+    text-decoration: underline;
+    color: $main-green;
+  }
+}
+
+/* end   FORM */
+
+.sign-up__social-separate {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background-color: $light-grey;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+    position: relative;
+    display: block;
+    padding-right: 18px;
+    padding-left: 18px;
+    text-transform: uppercase;
+    color: $neutral-grey;
+    background-color: #fff;
+  }
+}
+
+/* begin SOCIAL */
+.sign-up__social {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.sign-up__social-link {
+  display: inline-flex;
+  align-items: center;
+  width: calc(50% - 5px);
+  height: 56px;
+  margin-bottom: 10px;
+  padding: 5px 25px;
+  text-decoration: none;
+  border: 2px solid #4467b3;
+  border-radius: 28px !important;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  box-shadow: none;
+}
+
+.sign-up__social-link--google {
+  color: #db4537;
+  border-color: #db4537;
+  background-image: url('../img/google.svg');
+}
+
+.sign-up__social-link--fb {
+  color: #4467b3;
+  border-color: #4467b3;
+  background-image: url('../img/fb.svg');
+}
+
+.sign-up__social-link--apple {
+  color: #081c22;
+  border-color: #081c22;
+  background-image: url('../img/apple.svg');
+}
+
+.sign-up__social-link--linked {
+  color: #0077b5;
+  border-color: #0077b5;
+  background-image: url('../img/in.svg');
+}
+
+/* end   SOCIAL */
+
+.sigh-up__login {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.1;
+  width: 100%;
+  text-align: center;
+  color: $neutral-grey;
+
+  a {
+    text-decoration: underline;
+    color: $main-green;
+  }
+}
