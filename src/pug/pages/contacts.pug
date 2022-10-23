@@ -1,0 +1,65 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+mixin item(icon, period, cost)
+  .pricing__item
+    .pricing__icon
+      img(src="assets/img/pricing-icon-" + icon + ".svg" alt="icon")
+    .pricing__period #{period}
+    .pricing__cost #{cost}
+    .pricing__often per month
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .contacts.double-page
+        //BEGIN LEFT
+        .double-page__item.double-page__item--left(style="background-image: url('assets/img/bg-contacts.jpg');")
+          .double-page-blockquote We are connect <span>100,000</span> different businessin USA with temp staff
+
+        //END   LEFT
+
+        //BEGIN RIGHT
+        .double-page__item.double-page__item--right
+          .double-page-container
+            h2.page-top__title.contacts__title Contact
+            //BEGIN contacts__info
+            .contacts__info
+              .contacts__info-item
+                span.contacts__info-text Address
+                a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts__info-link Columbia, МD
+              .contacts__info-item
+                span.contacts__info-text Phone
+                a(href="tel:+6677779776").contacts__info-link 667 777 9776
+              .contacts__info-item
+                span.contacts__info-text Email
+                a(href="mailto:service@tempeak.com").contacts__info-link service@tempeak.com
+            //END   contacts__info
+
+            //BEGIN contacts__form
+            form.contacts__form
+              select.select.contacts__form-select
+                option(value="Subject") Subject
+                option(value="Subject 1") Subject 1
+                option(value="Subject 2") Subject 2
+              input(placeholder='Email Address').input.contacts__form-input
+              input(placeholder='Your Name').input.contacts__form-input
+              input(placeholder='Phone').input.contacts__form-input
+              textarea(placeholder='Message').textarea.contacts__form-textarea
+              button.cta-btn.contacts__cta-btn
+                span Send message
+                +svg('arr-right').how-it-page-top__tab-btn
+            //END   contacts__form
+        //END   RIGHT
+
+        include ../elements/buttons/direct-btn
+    //end content
+
+    include ../elements/popups
+    include ../sections/scripts

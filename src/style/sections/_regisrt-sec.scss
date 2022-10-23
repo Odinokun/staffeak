@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   background-color: rgba(162, 242, 192, .15);
+  padding-bottom: 20px;
 
   &::before {
     position: absolute;
@@ -94,6 +95,7 @@
   width: 100%;
   max-width: 188px;
   margin-bottom: 75px;
+  position: static;
 
   svg {
     fill: $main-green;

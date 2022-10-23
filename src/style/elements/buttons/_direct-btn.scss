@@ -24,10 +24,10 @@
   box-shadow: 0 12px 48px rgba(8, 28, 34, .16);
 
   @include min(769) {
+    position: absolute;
     right: 40px;
     bottom: 40px;
     transform: translateY(0);
-    position: absolute;
   }
 
   &.active {
@@ -58,5 +58,18 @@
     height: 12px;
     margin-left: 10px;
     transition: $transition;
+  }
+}
+
+.double-page {
+  .direct-btn {
+    right: 15px;
+    bottom: 15px;
+    transform: translateY(0);
+
+    @include min(769) {
+      right: 15px;
+      bottom: 40px;
+    }
   }
 }

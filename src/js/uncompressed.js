@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'how-it-works',
     'pricing',
     'sponsors',
+    'contacts',
     ]);
 });
 

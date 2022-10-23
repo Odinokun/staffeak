@@ -113,22 +113,41 @@ button {
   outline: none;
 }
 
-input {
+input,
+textarea,
+select {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+  overflow: hidden;
+  width: 100%;
   height: 54px;
-  background: $neutral-white;
+  padding: 5px 24px;
+  text-overflow: ellipsis;
+  color: $neutral-grey;
   border: 1px solid $light-grey;
   border-radius: 28px !important;
-  width: 100%;
-  color: $dark-green;
+  background: $neutral-white;
+
   @include placeholder-color($neutral-grey);
-  padding: 5px 24px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 110%;
 }
 
 textarea {
+  min-height: 100px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   resize: none;
+}
+
+select {
+  padding-left: 23px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 //input.error,
@@ -196,7 +215,6 @@ svg {
   }
   @include min(1200) {
     padding: 0 80px;
-    //padding: 0 220px;
   }
 }
 
@@ -234,3 +252,65 @@ svg {
     background-position: 50% 50%;
   }
 }
+
+/* begin DOUBLE PAGE */
+.double-page {
+  display: flex;
+}
+
+.double-page__item {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include min(769) {
+    width: 50%;
+  }
+}
+
+.double-page__item--left {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include min(769) {
+    display: flex;
+  }
+}
+
+.double-page-container {
+  max-width: 480px;
+  //max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include min(769) {
+    padding: 0 40px;
+  }
+  @include min(1200) {
+    max-width: 640px;
+    padding: 0 120px;
+  }
+}
+
+.double-page-blockquote {
+  max-width: 580px;
+  margin: auto auto 0 auto;
+  padding-right: 40px;
+  padding-left: 92px;
+  color: $neutral-white;
+  background-image: url('../img/blockquote.svg');
+  background-repeat: no-repeat;
+  background-position: 40px 0;
+  background-size: 20px 16px;
+
+  @include responsive-font(24, 20);
+
+  span {
+    color: $fresh-mint;
+  }
+}
+
+/* end   DOUBLE PAGE */
