@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'sponsors',
     'contacts',
     'sign-up',
+    'login',
     ]);
 });
 

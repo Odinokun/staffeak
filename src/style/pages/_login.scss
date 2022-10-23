@@ -1,0 +1,31 @@
+.login {
+  .double-page__item--left {
+    background-image: url('../img/bg-login.jpg');
+  }
+}
+
+.login__title {
+  margin-bottom: 24px;
+
+  @include min(769) {
+    margin-bottom: 40px;
+  }
+}
+
+.login__remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+
+  .sign-up__agree {
+    margin: 0;
+  }
+
+  .login__forgot {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: $main-green;
+  }
+}

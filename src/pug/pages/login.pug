@@ -1,0 +1,57 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .login.double-page
+        //BEGIN LEFT
+        .double-page__item.double-page__item--left
+          .double-page-blockquote Glad to see you again. Over <span>100,000</span> different businessin USA waiting for you
+        //END   LEFT
+
+        //BEGIN RIGHT
+        .double-page__item.double-page__item--right
+          .double-page-container
+            h2.login__title.page-top__title Log in
+
+            //BEGIN sign-up__form
+            form.sign-up__form
+              input(placeholder='Email').input.sign-up__input
+              input(placeholder='Password' type='password').input.sign-up__input
+              button.cta-btn.sign-up__cta-btn
+                span Sing up
+                +svg('arr-right')
+
+              .login__remember
+                .sign-up__agree
+                  .sign-up__agree-checkbox
+                    input(type="checkbox")
+                    span
+                  .sign-up__agree-text Remember me
+                a(href="reset.html").login__forgot Forgot password
+            //END   sign-up__form
+
+            .sign-up__social-separate
+              span OR log in with
+
+            //BEGIN SOCIAL
+            .sign-up__social
+              a(href="#").sign-up__social-link.sign-up__social-link--google Google
+              a(href="#").sign-up__social-link.sign-up__social-link--fb Facebook
+              a(href="#").sign-up__social-link.sign-up__social-link--apple Apple
+              a(href="#").sign-up__social-link.sign-up__social-link--linked Linked In
+            //END   SOCIAL
+
+            .sigh-up__login New user? <a href="sign-up.html">Sign up</a>
+        //END   RIGHT
+    //end content
+
+    include ../elements/popups
+    include ../sections/scripts

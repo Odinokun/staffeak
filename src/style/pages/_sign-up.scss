@@ -115,8 +115,8 @@
 
 .sign-up__agree {
   display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .sign-up__agree-checkbox {
@@ -186,6 +186,10 @@
     text-decoration: underline;
     color: $main-green;
   }
+}
+
+.sign-up__cta-btn {
+  margin-top: 10px;
 }
 
 /* end   FORM */

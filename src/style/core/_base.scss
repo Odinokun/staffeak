@@ -279,12 +279,19 @@ svg {
   }
 }
 
+.double-page__item--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .double-page-container {
-  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
   @include min(769) {
+    max-width: 480px;
     margin: 0;
     padding: 0 40px;
   }
@@ -292,10 +299,14 @@ svg {
     max-width: 640px;
     padding: 0 120px;
   }
+
+  .cta-btn {
+    max-width: 100%;
+  }
 }
 
 .double-page-blockquote {
-  max-width: 580px;
+  max-width: 600px;
   margin: auto auto 0 auto;
   padding-right: 40px;
   padding-left: 92px;
