@@ -22,7 +22,7 @@ block content
       .page-top.bg-rounds.sponsors-page-top
         .container
           h2.page-top__title.sponsors-page-top__title Sponsors
-          a(href="#").cta-btn.sponsors-page-top__cta-btn
+          button(data-popup="partner-popup").cta-btn.sponsors-page-top__cta-btn.popup-open
             span Become a sponsor
             +svg('arr-right').how-it-page-top__tab-btn
       //END   page-top
@@ -60,4 +60,5 @@ block content
     //end content
 
     include ../sections/footer
+    include ../elements/popups
     include ../sections/scripts

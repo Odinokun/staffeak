@@ -6,6 +6,7 @@ $(function() {
   require('./modules/text-anim')();
   require('./modules/tabs')();
   require('./modules/accordion')();
+  require('./modules/popup')();
 
 
   // begin phone mask
@@ -14,8 +15,6 @@ $(function() {
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 
-  // begin Popup
-  // require('./modules/popup')();
 
   // begin Animate.css
   //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!

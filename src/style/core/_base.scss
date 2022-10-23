@@ -113,13 +113,19 @@ button {
   outline: none;
 }
 
-//input {
-//  padding: 3px 10px 5px 10px;
-//  color: $neutral-grey;
-//  border: 1px solid $neutral-grey;
-//
-//  @include placeholder-color($neutral-grey);
-//}
+input {
+  height: 54px;
+  background: $neutral-white;
+  border: 1px solid $light-grey;
+  border-radius: 28px !important;
+  width: 100%;
+  color: $dark-green;
+  @include placeholder-color($neutral-grey);
+  padding: 5px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+}
 
 textarea {
   resize: none;

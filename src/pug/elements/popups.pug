@@ -1,0 +1,42 @@
+#popup__layer.popup__layer
+
+//BEGIN partner popup
+#partner-popup.partner-popup.popup.bg-rounds
+  .popup__close
+    +svg('close')
+  .popup-container
+    h2.popup__title Became a partner
+    .popup__descr We are always excited to welcome new faces to our team. To become our partner in recruiting needs please send us information about yourself along with your resume. The most strongest candidates will posses a B.S. degree and have at least 2 years of recruiting experience.
+    //BEGIN popup__form
+    .popup__form
+      .popup__form-row
+        input.input.popup__form-input(placeholder="Business name")
+        input.input.popup__form-input(placeholder="Phone number")
+      .popup__form-row
+        input.input.popup__form-input(placeholder="Email")
+        input.input.popup__form-input(placeholder="Website")
+      a(href="#").cta-btn.popup__cta-btn
+        span Become a sponsor
+        +svg('arr-right').how-it-page-top__tab-btn
+    //END   popup__form
+    .popup__form-footer We look forward to working with you.
+//END   partner popup
+
+//BEGIN direct popup
+#direct-popup.direct-popup.popup.popup--sm.bg-rounds
+  .popup__close
+    +svg('close')
+  .popup-container
+    h2.popup__title Direct hire
+    .popup__descr Don't have time to search? Send a request and our manager will contact you and fill out an application for a quick search for the vacancy you need.
+    //BEGIN popup__form
+    .popup__form
+      .popup__form-row
+        input.input.popup__form-input(placeholder="Phone number")
+      .popup__form-row
+        input.input.popup__form-input(placeholder="Business name")
+      a(href="#").cta-btn.popup__cta-btn
+        span Send request
+        +svg('arr-right').how-it-page-top__tab-btn
+    //END   popup__form
+//END   direct popup
