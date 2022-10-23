@@ -1,0 +1,43 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.about-page-top
+        .container
+          h2.page-top__title.about-page-top__title Staffing
+          .about-page-top__descr Do you need help with running your business smoothly and to eliminate unwanted overhead? Find your quality team with Staffeak.          Unlike traditional staffing, we regularly fill work assignments for any kind of business - both permanent and temporary.
+      //END   page-top
+
+      //BEGIN about
+      .about
+        include ../sections/different
+
+        //BEGIN banner
+        .about-banner
+          .container
+            .about-banner__info
+              h2.about-banner__title At Your Service<br>to your satisfaction
+              .about-banner__descr At Staffeak, we understand you and your long-term goals. Our attention to detail and superior customer assistance can help you to build your team and take the stress out of finding the best local (and nationwide) talent for your business. Our proven recruitment and training methodologies enable us to offer cost-effective permanent and temporary staffing in the US that meets your needs.
+        //END   banner
+
+        include ../sections/find
+        include ../sections/about-last
+      //END   about
+
+
+
+      include ../elements/buttons/direct-btn
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts

@@ -15,6 +15,7 @@ $(document).ready(function ($) {
     'reset-confirm',
     'restore',
     'delete',
+    'about',
     ]);
 });
 

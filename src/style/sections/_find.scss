@@ -1,0 +1,118 @@
+.find {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include min(941) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.find__title {
+  font-family: $font;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  color: $dark-green;
+
+  @include responsive-font(44, 32);
+  @include min(769) {
+    margin-bottom: 32px;
+  }
+}
+
+.find__subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #0ad582 0%, #a2f2c0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  @include min(769) {
+    margin-bottom: 40px;
+  }
+}
+
+.find__descr {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: $neutral-grey;
+
+  @include min(769) {
+    margin-bottom: 70px;
+  }
+}
+
+.find__row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $light-grey;
+
+  @include min(941) {
+    flex-wrap: nowrap;
+  }
+
+  &:first-child {
+    border-top: 1px solid $light-grey;
+  }
+}
+
+.find__td {
+  &:nth-child(1) {
+    font-weight: 500;
+    line-height: 1;
+    flex: none;
+    width: 45px;
+    padding-top: 20px;
+    color: $light-grey;
+
+    @include responsive-font(20, 18);
+    @include min(941) {
+      width: 100px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &:nth-child(2) {
+    font-weight: 500;
+    line-height: 1.2;
+    flex: none;
+    width: calc(100% - 45px);
+    padding-top: 20px;
+    padding-right: 10px;
+    color: $dark-green;
+
+    @include responsive-font(20, 18);
+    @include min(941) {
+      width: 310px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &:nth-child(3) {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.1;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    color: $neutral-grey;
+
+    @include min(941) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 0;
+    }
+  }
+}
