@@ -10,6 +10,9 @@ $(document).ready(function ($) {
     'contacts',
     'sign-up',
     'login',
+    'new-password',
+    'reset',
+    'reset-confirm',
     ]);
 });
 

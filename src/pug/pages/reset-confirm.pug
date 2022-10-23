@@ -1,0 +1,21 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .reset.reset--confirm.bg-rounds
+        .container
+          .reset__confirm-icon
+            img(src="assets/img/reset-confirm.svg" alt="icon")
+          .reset__confirm-text We have e-mailed your password reset link!
+    //end content
+
+    include ../elements/popups
+    include ../sections/scripts

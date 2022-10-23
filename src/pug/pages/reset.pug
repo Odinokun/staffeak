@@ -1,0 +1,27 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .reset.bg-rounds
+        .container
+          h2.login__title.page-top__title Reset password
+          form.sign-up__form
+            .input.sign-up__input
+              input(type='text' placeholder="Email")
+              span Email
+              span Some error text
+            button.cta-btn.sign-up__cta-btn
+              span Send password
+              +svg('arr-right')
+    //end content
+
+    include ../elements/popups
+    include ../sections/scripts

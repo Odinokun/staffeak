@@ -1,0 +1,56 @@
+.reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &::before {
+    opacity: .05;
+    background-size: cover;
+  }
+
+  .container {
+    max-width: 430px;
+
+    @include min(769) {
+      max-width: 480px;
+    }
+    @include min(1200) {
+      max-width: 560px;
+    }
+  }
+}
+
+.reset--confirm {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+}
+
+.reset__confirm-icon {
+  overflow: hidden;
+  width: 70px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+
+  img {
+    display: block;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.reset__confirm-text {
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: $deep-green;
+
+  @include responsive-font(24, 20);
+}
