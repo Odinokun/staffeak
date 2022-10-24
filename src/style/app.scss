@@ -10,12 +10,14 @@
 @import 'elements/btns';
 @import 'elements/search-main';
 @import 'elements/popup';
+@import 'elements/p-card';
 
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 
 //buttons
 @import "elements/buttons/direct-btn";
+@import "elements/buttons/view-more-btn";
 
 
 //section
@@ -48,3 +50,4 @@
 @import 'pages/reset';
 @import 'pages/restore';
 @import 'pages/about';
+@import 'pages/search-no-res';

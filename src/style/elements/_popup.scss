@@ -70,6 +70,7 @@
 
 .popup-container {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,3 +149,118 @@
   text-align: center;
   color: $neutral-grey;
 }
+
+/* begin VIEW MORE */
+.view-more-popup {
+  @include min(600) {
+    max-width: 650px;
+    height: auto;
+  }
+
+  .container {
+    padding: 0 90px;
+  }
+}
+
+.view-more-popup__icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 20px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.view-more-popup__title {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  text-align: center;
+  color: $dark-green;
+
+  @include responsive-font(24, 20);
+  @include min(769) {
+    margin-bottom: 70px;
+  }
+}
+
+.view-more-popup__btns {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+
+  @include min(600) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 477px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    min-width: 0;
+    height: 58px;
+
+    @include min(600) {
+      width: calc(50% - 38px);
+    }
+  }
+
+  .cta-btn--login {
+    color: $neutral-white;
+    background-color: $deep-green;
+    background-image: none;
+  }
+}
+
+
+.view-more-popup__btns-separ {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 27px;
+  height: 58px;
+  margin: 0 auto;
+  user-select: none;
+
+  @include min(600) {
+    position: relative;
+    width: 17px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: $light-grey;
+
+    @include min(600) {
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: $neutral-grey;
+    background-color: #fff;
+  }
+}
+
+/* end   VIEW MORE */

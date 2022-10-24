@@ -211,3 +211,39 @@
 }
 
 /* end   RESTORE */
+.download-cv {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  padding: 6px 24px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $dark-green;
+  border: 1px solid $light-grey;
+  border-radius: 30px !important;
+  background: $neutral-white;
+  box-shadow: none;
+
+  &:hover {
+    img {
+      transform: translateY(-5px);
+    }
+  }
+
+  img {
+    display: block;
+    flex: none;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    transition: .5s;
+  }
+}

@@ -1,0 +1,38 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.search-no-res-page-top
+        .container
+          .search-no-res-page-top__title-wrap
+            a(href="#").search-no-res-page-top__back-btn
+              +svg('arr-right')
+            h2.page-top__title.search-no-res-page-top__title Result
+          .search-no-res-page-top__descr We are finded <span>1,208</span> temp staff for your company
+      //END   page-top
+
+      //BEGIN search-no-reg
+      .search-no-reg
+        .container
+          //BEGIN list
+          .search-no-reg__list
+            include ../elements/p-cards/p-card-01
+            include ../elements/p-cards/p-card-02
+            include ../elements/p-cards/p-card-03
+          //END   list
+          include ../elements/buttons/view-more-btn
+      //END   search-no-reg
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts

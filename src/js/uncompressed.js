@@ -16,6 +16,7 @@ $(document).ready(function ($) {
     'restore',
     'delete',
     'about',
+    'search-no-reg',
     ]);
 });
 

@@ -10,14 +10,26 @@
     //BEGIN popup__form
     .popup__form
       .popup__form-row
-        input.input.popup__form-input(placeholder="Business name")
-        input.input.popup__form-input(placeholder="Phone number")
+        .input.popup__form-input
+          input(placeholder="Business name")
+          span Business name
+          span Some error text
+        .input.popup__form-input
+          input(placeholder="Phone number")
+          span Phone number
+          span Some error text
       .popup__form-row
-        input.input.popup__form-input(placeholder="Email")
-        input.input.popup__form-input(placeholder="Website")
+        .input.popup__form-input
+          input(placeholder="Email")
+          span Email
+          span Some error text
+        .input.popup__form-input
+          input(placeholder="Website")
+          span Website
+          span Some error text
       a(href="#").cta-btn.popup__cta-btn
         span Become a sponsor
-        +svg('arr-right').how-it-page-top__tab-btn
+        +svg('arr-right')
     //END   popup__form
     .popup__form-footer We look forward to working with you.
 //END   partner popup
@@ -32,11 +44,38 @@
     //BEGIN popup__form
     .popup__form
       .popup__form-row
-        input.input.popup__form-input(placeholder="Phone number")
+        .input.popup__form-input
+          input(placeholder="Phone number")
+          span Phone number
+          span Some error text
       .popup__form-row
-        input.input.popup__form-input(placeholder="Business name")
+        .input.popup__form-input
+          input(placeholder="Business name")
+          span Business name
+          span Some error text
       a(href="#").cta-btn.popup__cta-btn
         span Send request
-        +svg('arr-right').how-it-page-top__tab-btn
+        +svg('arr-right')
     //END   popup__form
 //END   direct popup
+
+//BEGIN view-more popup
+#view-more-popup.view-more-popup.popup
+  .popup__close
+    +svg('close')
+  .popup-container
+    .view-more-popup__icon
+      img(src="assets/img/info-icon.svg" alt="icon")
+    h2.view-more-popup__title To view all search results,<br>please login to your account or register
+    //BEGIN popup__form
+    .view-more-popup__btns
+      a(href="login.html").cta-btn.cta-btn--login
+        span Log in
+        +svg('arr-right')
+      .view-more-popup__btns-separ
+        span or
+      a(href="sign-up.html").cta-btn
+        span Registration
+        +svg('arr-right')
+    //END   popup__form
+//END   view-more popup
