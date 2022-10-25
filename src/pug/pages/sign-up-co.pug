@@ -1,0 +1,41 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    //BEGIN header
+    header#header.header.header--co
+      .container
+        include ../elements/logo
+        include ../elements/menu-co
+        .header__user
+          a(href="#").header__user-ava
+            span C
+        .header__settings
+          ul.header__settings-menu
+            li.header__settings-item
+              a(href="#").header__settings-link Edit profile
+            li.header__settings-item
+              a(href="#").header__settings-link Change password
+          button.header__login
+            +svg('person')
+            .header__login-text Log out
+        include ../elements/menu-btn-co
+    //END   header
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.sign-up-co-page-top
+        .container
+          .search-no-res-page-top__title-wrap
+            h2.page-top__title.sign-up-co-page-top__title Profile
+      //END   page-top
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts

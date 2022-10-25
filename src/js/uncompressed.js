@@ -17,6 +17,7 @@ $(document).ready(function ($) {
     'delete',
     'about',
     'search-no-reg',
+    'sign-up-co',
     ]);
 });
 

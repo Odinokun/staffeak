@@ -97,3 +97,57 @@
     color: $neutral-white;
   }
 }
+
+
+/* begin PROFILE BTN */
+.menu-btn--profile {
+  justify-content: space-between;
+  width: 127px;
+  padding-left: 2px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 55px;
+    width: 1px;
+    height: 20px;
+    margin: auto;
+    content: '';
+    background-color: rgba(162, 242, 192, .25);
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    content: '';
+    border-radius: 50%;
+    background-color: $main-green;
+  }
+}
+
+.menu-btn__ava {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: $light-grey;
+
+  span {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 1px 1px 0 0;
+    color: rgba(99, 118, 126, .25);
+  }
+}
+
+/* end   PROFILE BTN */
