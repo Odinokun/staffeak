@@ -231,6 +231,10 @@ select::-ms-expand {
 }
 
 /* begin DOWNLOAD INPUT */
+.download {
+  position: relative;
+}
+
 .download__input {
   font-size: 16px;
   font-weight: 500;
@@ -250,12 +254,19 @@ select::-ms-expand {
 
   @include placeholder-color($neutral-grey);
 
+  &.error {
+    .download__input-placeholder {
+      transform: translateY(8px);
+    }
+  }
+
   input {
     z-index: 1;
     opacity: 0;
   }
 }
 
+.download__input-placeholder,
 .download__input-filename {
   font-size: 16px;
   font-weight: 500;
@@ -269,10 +280,15 @@ select::-ms-expand {
   overflow: hidden;
   margin: auto;
   padding: 18px 45px 18px 24px;
+  transition: .5s;
   white-space: nowrap;
   text-overflow: ellipsis;
   pointer-events: none;
   color: $neutral-grey;
+}
+
+.download__input-filename {
+  display: none;
 }
 
 .download__footer {
@@ -325,10 +341,24 @@ select::-ms-expand {
   }
 }
 
+.download__clear-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: $dark-green;
+  background-image: url('../img/i-delete-file.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 /* end   DOWNLOAD INPUT */
 
 /* begin CHECKBOX */
-
 .checkbox-label {
   display: flex;
   cursor: pointer;

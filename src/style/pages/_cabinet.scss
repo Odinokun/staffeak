@@ -95,12 +95,14 @@
   display: flex;
   justify-content: flex-start;
 }
-.cabinet__pricing-list{
+
+.cabinet__pricing-list {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
 }
+
 .cabinet__btns-block {
   display: flex;
   margin-top: 50px;
