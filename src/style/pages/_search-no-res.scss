@@ -9,11 +9,6 @@
   @include min(769) {
     padding-top: 130px;
   }
-
-  &::before {
-    opacity: .05;
-    background-size: cover;
-  }
 }
 
 .search-no-res-page-top__title-wrap {

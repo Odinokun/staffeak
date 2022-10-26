@@ -18,6 +18,7 @@ $(document).ready(function ($) {
     'about',
     'search-no-reg',
     'sign-up-co',
+    'sign-up-bo',
     ]);
 });
 

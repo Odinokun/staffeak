@@ -9,11 +9,6 @@
   @include min(769) {
     padding-top: 156px;
   }
-
-  &::before {
-    opacity: .05;
-    background-size: cover;
-  }
 }
 
 .about-page-top__title {

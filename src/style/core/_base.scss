@@ -308,15 +308,17 @@ select::-ms-expand {
     width: 100%;
   }
 }
-.download__icon-success{
-  display: none;
+
+.download__icon-success {
   position: absolute;
   top: 0;
   right: 10px;
   bottom: 0;
+  display: none;
   width: 32px;
   height: 32px;
   margin: auto;
+
   img {
     display: block;
     width: 100%;
@@ -468,6 +470,13 @@ svg {
 .page-top {
   padding-top: 100px;
   padding-bottom: 30px;
+
+  &.bg-rounds {
+    &::before {
+      opacity: .06;
+      background-size: cover;
+    }
+  }
 }
 
 .page-top__title {
@@ -572,98 +581,3 @@ svg {
 }
 
 /* end   DOUBLE PAGE */
-
-/* begin CABINET */
-.cabinet {
-  padding-top: 30px;
-  padding-bottom: 120px;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-
-    @include min(600) {
-      flex-direction: row;
-    }
-  }
-}
-
-.cabinet__left {
-  display: flex;
-  flex-direction: column;
-  flex: none;
-  width: 100%;
-  padding-bottom: 50px;
-
-  @include min(600) {
-    width: 240px;
-  }
-  @include min(941) {
-    width: 295px;
-  }
-}
-
-.cabinet__right {
-  width: 100%;
-
-  @include min(600) {
-    padding-left: 50px;
-  }
-  @include min(941) {
-    padding-left: 80px;
-  }
-  @include min(1025) {
-    padding-left: 120px;
-  }
-}
-
-.cabinet__inputs-block {
-  margin-bottom: 10px;
-}
-
-.cabinet__title {
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 15px;
-  color: $dark-green;
-
-  @include responsive-font(20, 18);
-}
-
-.cabinet__input-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  .input,
-  .select {
-    width: 100%;
-    margin-bottom: 20px;
-
-    @include min(941) {
-      width: calc(50% - 10px);
-    }
-  }
-
-  .checkbox-label {
-    margin-bottom: 20px;
-    padding-right: 30px;
-
-    &:last-child {
-      padding-right: 0;
-    }
-  }
-}
-
-.cabinet__input-row--lg {
-  .input {
-    width: 100%;
-  }
-}
-
-.cabinet__input-row--checkboxes {
-  display: flex;
-  justify-content: flex-start;
-}
-
-/* end   CABINET */
