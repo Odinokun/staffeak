@@ -18,6 +18,8 @@
 
   @include min(1025) {
     margin-left: auto;
+    pointer-events: auto;
+    opacity: 1;
   }
 }
 

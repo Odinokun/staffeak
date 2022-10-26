@@ -1,0 +1,16 @@
+mixin slider-range-single(text, finish)
+  //BEGIN slider-range-single
+  .slider-range-single
+    .slider-range-single__header
+      span.slider-range-single__text #{text}
+      .slider-range-single__input-wrap
+        input.slider-range-single__input.slider-range-single__input--finish(type='text', readonly='', data-finish='' + finish, data-max='120')
+    .slider-range-single__scale
+  //END   slider-range-single
+
+//BEGIN slider-range-single-wrap
+.slider-range-single-wrap
+  +slider-range-single('Is more than 48 hours', '45')
+  +slider-range-single('Is between 48 and 12 hours', '60')
+  +slider-range-single('Is less than 12 hours', '90')
+//END   slider-range-single-wrap

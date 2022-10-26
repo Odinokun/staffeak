@@ -8,19 +8,13 @@ $(function() {
   require('./modules/accordion')();
   require('./modules/popup')();
   require('./modules/input-placeholder')();
+  require('./modules/input-type-file')();
   require('./modules/restore')();
-
+  require('./modules/slider-range-single')();
 
   // begin phone mask
   // require('./modules/maskedinput')();
 
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
-
-
-  // begin Animate.css
-  //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
-  // require('./modules/waypoints')();
-  // require('./modules/animateCss')();
-
 });
