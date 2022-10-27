@@ -19,6 +19,7 @@ $(document).ready(function ($) {
     'search-no-reg',
     'sign-up-co',
     'sign-up-bo',
+    'profile-co',
     ]);
 });
 

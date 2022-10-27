@@ -1,16 +1,8 @@
 .how-it-page-top {
-  position: relative;
-  background-color: $neutral-white;
-
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  &::before {
-    opacity: .05;
-    background-size: cover;
   }
 }
 

@@ -55,7 +55,10 @@
 }
 
 .header__user-ava {
+  display: none;
+
   @include min(1025) {
+    position: relative;
     display: flex;
     overflow: hidden;
     justify-content: center;
@@ -68,12 +71,22 @@
   }
 
   span {
-    @include min(1025) {
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1;
-      padding-top: 1px;
-      color: rgba(99, 118, 126, .25);
-    }
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    padding-top: 1px;
+    color: rgba(99, 118, 126, .25);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
   }
 }

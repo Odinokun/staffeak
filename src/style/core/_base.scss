@@ -205,7 +205,7 @@ button {
     color: #63767e;
 
     -webkit-appearance: none;
-    -moz-appearance: none;
+       -moz-appearance: none;
   }
 }
 
@@ -498,8 +498,10 @@ svg {
 }
 
 .page-top {
+  position: relative;
   padding-top: 100px;
   padding-bottom: 30px;
+  background-color: $neutral-white;
 
   &.bg-rounds {
     &::before {

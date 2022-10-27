@@ -1,7 +1,5 @@
 .sponsors-page-top {
-  position: relative;
   padding-top: 100px;
-  background-color: $neutral-white;
 
   @include min(769) {
     padding-top: 212px;
@@ -17,11 +15,6 @@
       justify-content: space-between;
       align-items: flex-end;
     }
-  }
-
-  &::before {
-    opacity: .05;
-    background-size: cover;
   }
 }
 

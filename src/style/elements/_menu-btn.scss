@@ -117,20 +117,23 @@
     background-color: rgba(162, 242, 192, .25);
   }
 
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 12px;
-    height: 12px;
-    content: '';
-    border: 1px solid #fff;
-    border-radius: 50%;
-    background-color: $main-green;
+  &.active {
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 12px;
+      height: 12px;
+      content: '';
+      border: 1px solid #fff;
+      border-radius: 50%;
+      background-color: $main-green;
+    }
   }
 }
 
 .menu-btn__ava {
+  position: relative;
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -148,6 +151,18 @@
     line-height: 1;
     padding: 1px 1px 0 0;
     color: rgba(99, 118, 126, .25);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-position: center;
+    object-fit: cover;
   }
 }
 
