@@ -1,0 +1,182 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header-co-ava
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.sign-up-co-page-top
+        .container
+          .search-no-res-page-top__title-wrap
+            h2.page-top__title.sign-up-co-page-top__title Edit profile
+      //END   page-top
+
+      form.sign-up-co.cabinet
+        .container
+          //BEGIN LEFT
+          .cabinet__left
+            h3.cabinet__title Photo and documents
+            .sign-up-co__ava.edit
+              .sign-up-co__ava-clear-btn
+              .sign-up-co__ava-img
+                img(src="assets/img/profile-co-photo.jpg" alt="ava")
+              .sign-up-co__ava-text
+                span Upload your photo
+                span (jpg, jpeg, png, gif)<br>size less than 2Mb
+
+            include ../elements/download
+            button.download-more add one more
+          //END   LEFT
+
+          //BEGIN RIGHT
+          .cabinet__right
+            //BEGIN block personal
+            .cabinet__inputs-block
+              h3.cabinet__title Personal information
+              .cabinet__input-row
+                .input
+                  input(placeholder="First name")
+                  span First name
+                  span Some error text
+                .input
+                  input(placeholder="Last name")
+                  span Last name
+                  span Some error text
+              .cabinet__input-row
+                .input
+                  input(placeholder="What school you attend")
+                  span What school you attend
+                  span Some error text
+                .input
+                  input(placeholder="Date of graduation")
+                  span Date of graduation
+                  span Some error text
+              .cabinet__input-row
+                .input
+                  input(placeholder="Email")
+                  span Email
+                  span Some error text
+                .input
+                  input(placeholder="Phone")
+                  span Phone
+                  span Some error text
+              .cabinet__input-row
+                .input
+                  input(placeholder="Birthday")
+                  span Birthday
+                  span Some error text
+                .select
+                  select
+                    option(value="Year of experience") Year of experience
+                    option(value="1-2 years") 1-2 years
+                    option(value="3-5 years") 3-5 years
+                    option(value="10-200 years") 10-200 years
+                  span Year of experience
+                  span Some error text
+            //END   block
+
+            //BEGIN block address
+            .cabinet__inputs-block
+              h3.cabinet__title Address
+              .cabinet__input-row
+                .select
+                  select
+                    option(value="State") State
+                    option(value="1-2 years") 1-2 years
+                    option(value="3-5 years") 3-5 years
+                    option(value="10-200 years") 10-200 years
+                  span State
+                  span Some error text
+                .select
+                  select
+                    option(value="City") City
+                    option(value="1-2 years") 1-2 years
+                    option(value="3-5 years") 3-5 years
+                    option(value="10-200 years") 10-200 years
+                  span City
+                  span Some error text
+
+              .cabinet__input-row.cabinet__input-row--lg
+                .input
+                  input(placeholder="Address")
+                  span Address
+                  span Some error text
+              .cabinet__input-row
+                .input
+                  input(placeholder="ZIP")
+                  span ZIP
+                  span Some error text
+                .input
+                  input(placeholder="Miles available to commute")
+                  span Miles available to commute
+                  span Some error text
+            //END   block
+
+            //BEGIN block Specialization
+            .cabinet__inputs-block
+              h3.cabinet__title Specialization
+              .cabinet__input-row
+                .select
+                  select
+                    option(value="Industry") Industry
+                    option(value="1-2 years") 1-2 years
+                    option(value="3-5 years") 3-5 years
+                    option(value="10-200 years") 10-200 years
+                  span Industry
+                  span Some error text
+                .select
+                  select
+                    option(value="Speciality") Speciality
+                    option(value="1-2 years") 1-2 years
+                    option(value="3-5 years") 3-5 years
+                    option(value="10-200 years") 10-200 years
+                  span Speciality
+                  span Some error text
+            //END   block
+
+            //BEGIN block type of work
+            .cabinet__inputs-block
+              h3.cabinet__title Type of work
+              .cabinet__input-row.cabinet__input-row--checkboxes
+                label.checkbox-label.sign-up-co__checkbox
+                  .checkbox
+                    input(type="checkbox" checked)
+                    span
+                  .checkbox__text Part time
+                label.checkbox-label.sign-up-co__checkbox
+                  .checkbox
+                    input(type="checkbox")
+                    span
+                  .checkbox__text Full time
+            //END   block
+
+            //BEGIN block type of work
+            .cabinet__inputs-block
+              h3.cabinet__title Salary per hour
+              include ../elements/slider-range-single-list
+            //END   block
+
+            //BEGIN block BTNS
+            .cabinet__btns-block
+              button.cabinet__delete-acc
+                img(src="assets/img/basket.svg" alt="delete")
+                span Delete account
+
+              button.cabinet__cansel Cansel
+
+              button.cta-btn.cabinet__cta-btn
+                span Save
+                +svg('arr-right')
+            //END   block
+          //END   RIGHT
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts

@@ -20,6 +20,8 @@ $(document).ready(function ($) {
     'sign-up-co',
     'sign-up-bo',
     'profile-co',
+    'profile-co-no-ava',
+    'edit-co',
     ]);
 });
 
