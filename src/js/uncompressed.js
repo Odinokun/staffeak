@@ -22,6 +22,7 @@ $(document).ready(function ($) {
     'profile-co',
     'profile-co-no-ava',
     'edit-co',
+    'requests',
     ]);
 });
 

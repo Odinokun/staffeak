@@ -11,6 +11,7 @@ $(function() {
   require('./modules/input-type-file')();
   require('./modules/restore')();
   require('./modules/slider-range-single')();
+  require('./modules/filter')();
 
   // begin phone mask
   // require('./modules/maskedinput')();

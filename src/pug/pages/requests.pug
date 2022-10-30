@@ -1,0 +1,71 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+mixin request(logo, title, user, city, btn, btnClass)
+  .requests__row
+    .requests__logo
+      img(src="assets/img/sponsors/sponsor-" + logo + ".svg" alt="logo")
+    .requests__descr
+      .requests__title #{title}
+      .requests__user #{user}
+      .requests__city #{city}
+    .requests__right
+      .requests__schedule
+        .requests__schedule-icon
+          img(src="assets/img/clock.svg" alt="clock")
+        .requests__schedule-info
+          span 13.12 - 16.12
+          span 10:00-18:00
+      button(class="requests__btn requests__btn--" + btnClass)
+        span #{btn}
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + btnClass)
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.requests-page-top
+        .container
+          h2.page-top__title.requests-page-top__title Requests
+          .requests-filter-wrap
+            .requests-filter
+              .requests-filter__item.active All
+              .requests-filter__item Waiting
+              .requests-filter__item Accepted
+              .requests-filter__item Completed
+              .requests-filter__item Canceled
+              .requests-filter__item Declined
+      //END   page-top
+
+      //BEGIN requests
+      .requests
+        .container
+          //BEGIN requests-day
+          .requests-day
+            .requests-day__title.requests-day__title--today Today
+            +request('01', 'Massive Dynamic', 'Darrell Steward', 'USA, Louisville', 'Waiting', 'wait')
+            +request('02', 'Acme Corporation', 'Jerome Bell', 'USA, Mesa', 'Waiting', 'wait')
+            +request('03', 'The New York Inquirer', 'Jenny Wilson', 'USA, Fort Worth', 'Compleated', 'compl')
+          //END   requests-day
+
+          //BEGIN requests-day
+          .requests-day
+            .requests-day__title 5 August 2022
+            +request('04', 'Cyberdyne Systems', 'Ronald Richards', 'USA, New York', 'Canceled', 'cancel')
+            +request('05', 'Globex Corporation', 'Bessie Cooper', 'USA, El Paso', 'Declined', 'declin')
+          //END   requests-day
+      //END   requests
+
+      include ../elements/buttons/direct-btn
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts
