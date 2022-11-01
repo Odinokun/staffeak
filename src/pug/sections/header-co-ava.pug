@@ -7,6 +7,19 @@ header#header.header.header--co
       a(href="#").header__user-ava
         img(src="assets/img/ava.jpg" alt="avatar")
         span C
+      //BEGIN header__user-menu
+      .header__user-menu-wrap
+        .header__user-menu
+          ul.header__user-menu-list
+            li.header__user-menu-item
+              a(href="#").header__user-menu-link Change password
+            li.header__user-menu-item
+              a(href="#").header__user-menu-link Edit profile
+          ul.header__user-menu-list
+            li.header__user-menu-item
+              a(href="#").header__user-menu-link Log out
+      //END   header__user-menu
+
     .header__settings
       ul.header__settings-menu
         li.header__settings-item

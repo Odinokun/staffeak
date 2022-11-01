@@ -1,0 +1,69 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header-bo-ava
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.sign-up-co-page-top
+        .container
+          //BEGIN header
+          .profile-bo__header
+            h2.profile-bo__header-title Business Owner
+            .profile-bo__header-text
+              a(href="#") business-owner.com
+          //END   header
+      //END   page-top
+
+      .profile-bo
+        .container
+          //BEGIN LEFT
+          .profile-bo__left
+            .profile-bo__ava
+              .profile-bo__ava-clear-btn
+              .profile-bo__ava-img
+                img(src="assets/img/company-logo.jpg" alt="logo")
+              .profile-bo__ava-no
+                img(src="assets/img/i-no-logo.svg" alt="icon")
+                span Company<br>Logotype
+          //END   LEFT
+
+          //BEGIN RIGHT
+          .profile-bo__right
+            .profile-bo__text
+              p At tempeak, we understand you and your long-term needs. Our attention to detail and superior customer assistance can assist you in building your team and take the stress out of finding the best local (and nationwide) talent for your dental office in a matter of seconds.
+              p Our proven recruitment and training methodologies enable us to offer cost-effective permanent and temporary staffing in the US that meets your clinic and office needs.
+              p Nothing should stop you from unlocking you and your dental offices maximum potential. tempeak is known for the highest standards of timeliness, professionalism, and respect. We unite quality dental professionals with successful dental practices. We are proud to serve dental offices nationwide! We are looking forward to working with you!
+            .profile-bo__info
+              span Address
+              span 12345678, 888-00 Freedom Blvd, Thief World, California
+            .profile-bo__info
+              span E-mail
+              span bo-profile@gmail.com
+            .profile-bo__info
+              span Phone
+              span 222 123 456 789
+            .profile-bo__info
+              span Contact Person
+              span Jack Jonson
+            .profile-bo__footer
+              .profile-bo__subscription
+                .profile-bo__subscription-header
+                  span.profile-bo__subscription-text Subscription - 3 Month
+                  a(href="#").profile-bo__subscription-change Change
+
+                .slider-range-single
+                  input.slider-range-single__input.slider-range-single__input--finish(style="width: 78%" data-finish='78', data-max='100')
+                  .slider-range-single__scale
+          //END   RIGHT
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts

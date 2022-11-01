@@ -23,6 +23,8 @@ $(document).ready(function ($) {
     'profile-co-no-ava',
     'edit-co',
     'requests',
+    'request-bo',
+    'profile-bo',
     ]);
 });
 
