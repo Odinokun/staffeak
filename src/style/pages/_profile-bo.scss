@@ -85,20 +85,34 @@
   }
 }
 
-/* begin AVA */
-.profile-bo__ava {
-  position: relative;
-  flex: none;
-  width: 295px;
-  height: 295px;
+.profile-bo__left {
   margin-top: -70px;
-  border: 1px solid $light-grey;
-  border-radius: 16px;
-  background: #fff;
 
   @include min(941) {
     margin-top: -155px;
   }
+}
+
+/* begin AVA */
+.profile-bo__ava {
+  position: relative;
+  flex: none;
+  width: 163px;
+  height: 163px;
+  margin-bottom: 30px;
+  border: 1px solid $light-grey;
+  border-radius: 16px;
+  background-color: #fff;
+
+  @include min(600) {
+    width: 220px;
+    height: 220px;
+  }
+  @include min(941) {
+    width: 295px;
+    height: 295px;
+  }
+
 
   &.edit {
     .profile-bo__ava-clear-btn {
@@ -136,7 +150,7 @@
   overflow: hidden;
   margin: auto;
   border-radius: 16px;
-  background-color: $dark-green;
+  background-color: $neutral-grey;
 
   img {
     display: block;
@@ -308,59 +322,65 @@
 /* end   SUBSCRIPTION */
 
 /* begin ACHTUNG */
-.profile-bo__achtung{
-  width: 100%;
+.profile-bo__achtung {
   position: relative;
   display: flex;
-  background: rgba(242, 162, 162, 0.25);
-  border-radius: 4px;
+  width: 100%;
   padding: 17px 30px 50px 30px;
-  @include min(600) {
-  align-items: center;
-  padding: 17px 30px;
+  border-radius: 4px;
+  background: rgba(242, 162, 162, .25);
 
+  @include min(600) {
+    align-items: center;
+    padding: 17px 30px;
   }
 }
-.profile-bo__achtung-icon{
-  flex: none;
-  img{
-    width: 36px;
-    display: block;
-    @include min(375) {
-    width: 50px;
-    height: 44px;
 
+.profile-bo__achtung-icon {
+  flex: none;
+
+  img {
+    display: block;
+    width: 36px;
+
+    @include min(375) {
+      width: 50px;
+      height: 44px;
     }
   }
 }
-.profile-bo__achtung-text{
 
-  font-weight: 600;
+.profile-bo__achtung-text {
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.1;
   width: 100%;
+  padding: 0 0 5px 20px;
   color: $dark-green;
-  padding: 0px 0px 5px 20px;
-  @include min(600) {
-  padding: 10px 20px;
 
+  @include min(600) {
+    padding: 10px 20px;
   }
 }
-.profile-bo__achtung-link{
-  display: block;
-  margin-left: auto;
-  font-weight: 500;
+
+.profile-bo__achtung-link {
   font-size: 12px;
+  font-weight: 500;
   line-height: 1.1;
-  text-decoration: underline;
-  color: $dark-green;
-  flex: none;
   position: absolute;
   right: 30px;
   bottom: 30px;
+  display: block;
+  flex: none;
+  margin-left: auto;
+  text-decoration: underline;
+  color: $dark-green;
+
   @include min(600) {
     position: relative;
-    right: 0;bottom: 0;
+    right: 0;
+    bottom: 0;
   }
 }
+
 /* end   ACHTUNG */

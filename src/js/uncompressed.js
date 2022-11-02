@@ -26,6 +26,7 @@ $(document).ready(function ($) {
     'request-bo',
     'profile-bo',
     'profile-bo-inform',
+    'edit-bo',
     ]);
 });
 
