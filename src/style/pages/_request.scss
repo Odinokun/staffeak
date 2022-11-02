@@ -1,30 +1,81 @@
-.request-co__salary{
+.request-co__salary {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.request-co__achtung{
-  display: flex;align-items: center;
-  padding: 18px 20px;
-  border: 1px dashed #F5A972;
-  border-radius: 4px;
+.request-co__achtung {
+  display: flex;
+  align-items: center;
   margin-bottom: 60px;
+  padding: 18px 20px;
+  border: 1px dashed #f5a972;
+  border-radius: 4px;
 }
-.request-co__achtung-icon{
-  margin-right: 16px;
+
+.request-co__achtung-icon {
   flex: none;
+  margin-right: 16px;
+
   img {
-  width: 44px;
-  height: 44px;
     display: block;
+    width: 44px;
+    height: 44px;
   }
 }
-.request-co__achtung-text{
-  font-weight: 600;
+
+.request-co__achtung-text {
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.1;
   color: $dark-green;
 }
-.request-co__cta-btn{
+
+.request-co__cta-btn {
   margin-left: auto;
 }
+
+/* begin REVIEW */
+.profile-co__footer-review {
+  margin-top: 30px;
+  padding: 30px;
+  border: 1px dashed $main-green;
+  border-radius: 4px;
+
+  .cta-btn {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+.profile-co__footer-review-title {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: $dark-green;
+
+  @include responsive-font(24, 22);
+}
+
+.profile-co__footer-rating {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.profile-co__footer-rating-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  color: $dark-green;
+}
+
+.profile-co__footer-textarea-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  color: $dark-green;
+}
+
+/* end   REVIEW */

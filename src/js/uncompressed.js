@@ -31,6 +31,7 @@ $(document).ready(function ($) {
     'request-co',
     'request-co-wait',
     'request-co-accept',
+    'request-co-review',
     ]);
 });
 

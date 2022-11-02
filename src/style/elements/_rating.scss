@@ -1,0 +1,64 @@
+.rating-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.rating {
+  position: relative;
+  display: inline-flex;
+  //overflow: hidden;
+}
+
+.rating__filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 17px;
+  transform: translateX(0);
+  background-color: #fff;
+}
+
+.rating__value {
+  font-size: 13px;
+  font-weight: 400;
+  z-index: 1;
+  display: none;
+  margin-bottom: 10px;
+  user-select: none;
+  color: #000;
+}
+
+.rating__stars {
+  display: flex;
+}
+
+.rating__stars--transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.rating__star {
+  position: relative;
+  overflow: hidden;
+  flex: none;
+  fill: $main-green;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+
+  ////  &:nth-child(n + 2) {
+  ////    @include max(575) {
+  ////      display: none !important;
+  ////    }
+  ////  }
+  ////
+  &:last-child {
+    margin-right: 0;
+  }
+}

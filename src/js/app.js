@@ -12,6 +12,7 @@ $(function() {
   require('./modules/restore')();
   require('./modules/slider-range-single')();
   require('./modules/filter')();
+  require('./modules/rating')();
 
   // begin phone mask
   // require('./modules/maskedinput')();
