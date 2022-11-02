@@ -25,6 +25,7 @@ $(document).ready(function ($) {
     'requests',
     'request-bo',
     'profile-bo',
+    'profile-bo-inform',
     ]);
 });
 

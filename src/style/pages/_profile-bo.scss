@@ -306,3 +306,61 @@
 }
 
 /* end   SUBSCRIPTION */
+
+/* begin ACHTUNG */
+.profile-bo__achtung{
+  width: 100%;
+  position: relative;
+  display: flex;
+  background: rgba(242, 162, 162, 0.25);
+  border-radius: 4px;
+  padding: 17px 30px 50px 30px;
+  @include min(600) {
+  align-items: center;
+  padding: 17px 30px;
+
+  }
+}
+.profile-bo__achtung-icon{
+  flex: none;
+  img{
+    width: 36px;
+    display: block;
+    @include min(375) {
+    width: 50px;
+    height: 44px;
+
+    }
+  }
+}
+.profile-bo__achtung-text{
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.1;
+  width: 100%;
+  color: $dark-green;
+  padding: 0px 0px 5px 20px;
+  @include min(600) {
+  padding: 10px 20px;
+
+  }
+}
+.profile-bo__achtung-link{
+  display: block;
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1;
+  text-decoration: underline;
+  color: $dark-green;
+  flex: none;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  @include min(600) {
+    position: relative;
+    right: 0;bottom: 0;
+  }
+}
+/* end   ACHTUNG */
