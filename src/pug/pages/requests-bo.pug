@@ -1,0 +1,88 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+mixin request(ava, name, position, btn, btnClass)
+  //BEGIN p-card
+  .p-card
+    //BEGIN ava
+    .p-card__ava
+      img(src="assets/img/results/res-" + ava + ".jpg" alt="ava")
+    //END   ava
+
+    //BEGIN main
+    .p-card__main
+      .p-card__name #{name}
+      .p-card__position
+        span Finance
+        span #{position}
+      .p-card__about
+        span 4+ years of experience
+        span Alabama, Dreamland
+        span Salary range $40
+      .p-card__awards
+        .p-card__award-verif
+          .p-card__award-verif-icon
+            img(src="assets/img/verificated.svg" alt="icon")
+          .p-card__award-verif-text Verificated
+        .p-card__award-rait
+          .p-card__award-rait-icon
+            img(src="assets/img/star.svg" alt="icon")
+          .p-card__award-rait-text 4.97
+          a(href="#").p-card__award-rait-link (12)
+    //END   main
+
+    //BEGIN btns
+    .p-card__btns
+      button(class="requests__btn requests__btn--" + btnClass)
+        span #{btn}
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + btnClass)
+    //END   btns
+  //END   p-card
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header-co-ava
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.requests-page-top
+        .container
+          h2.page-top__title.requests-page-top__title Requests
+          .requests-filter-wrap
+            .requests-filter
+              .requests-filter__item.active All
+              .requests-filter__item Waiting
+              .requests-filter__item Accepted
+              .requests-filter__item Completed
+              .requests-filter__item Canceled
+              .requests-filter__item Declined
+      //END   page-top
+
+      //BEGIN requests
+      .requests
+        .container
+          //BEGIN requests-day
+          .requests-day
+            .requests-day__title.requests-day__title--today Today
+            +request('04', 'Lilu Jonson', 'Accounting and audit', 'Waiting', 'wait')
+            +request('01', 'Annette Black', 'Accounting and audit', 'Accepted', 'accept')
+            +request('06', 'Wade Warren', 'Territory Manager', 'Compleated', 'compl')
+          //END   requests-day
+
+          //BEGIN requests-day
+          .requests-day
+            .requests-day__title 5 August 2022
+            +request('07', 'Brooklyn Simmons', 'Market Development Manager', 'Canceled', 'cancel')
+            +request('08', 'Cameron Williamson', 'Financial Advisor', 'Declined', 'declin')
+          //END   requests-day
+      //END   requests
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts

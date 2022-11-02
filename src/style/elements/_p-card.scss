@@ -209,6 +209,14 @@
     margin-left: 20px;
     padding-top: 0;
   }
+
+  .requests__btn {
+    max-width: 100%;
+
+    @include min(600) {
+      max-width: 295px;
+    }
+  }
 }
 
 .p-card-download-cv {
