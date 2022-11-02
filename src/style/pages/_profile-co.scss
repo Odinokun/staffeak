@@ -4,12 +4,21 @@
   @include min(941) {
     padding-top: 160px;
   }
+
+  .profile-bo__header-back {
+    top: -45px;
+
+    @include min(941) {
+      top: -75px;
+    }
+  }
 }
 
 /* begin HEADER */
 .profile-co__header {
   display: flex;
   flex-direction: column;
+  min-height: 150px;
   padding-bottom: 70px;
 
   @include min(941) {
@@ -122,7 +131,7 @@
 
   @include min(941) {
     position: absolute;
-    top: -200px;
+    top: -190px;
     left: 0;
     width: 380px;
     max-width: 100%;
@@ -218,12 +227,36 @@
   }
 }
 
+.profile-co__footer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30px 0;
+  border-top: 1px solid $light-grey;
+
+  .requests__btn {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+
+    @include min(600) {
+      margin-left: 20px;
+    }
+    @include min(600) {
+      width: calc(50% - 10px);
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
 
 //begin #PERSON SALARY
 .profile-co-salary {
   width: 100%;
-  padding: 30px 0;
-  border-top: 1px solid $light-grey;
 }
 
 .profile-co-salary__title {

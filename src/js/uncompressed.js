@@ -28,6 +28,9 @@ $(document).ready(function ($) {
     'profile-bo-inform',
     'edit-bo',
     'requests-bo',
+    'request-co',
+    'request-co-wait',
+    'request-co-accept',
     ]);
 });
 

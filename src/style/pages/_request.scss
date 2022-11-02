@@ -1,0 +1,30 @@
+.request-co__salary{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.request-co__achtung{
+  display: flex;align-items: center;
+  padding: 18px 20px;
+  border: 1px dashed #F5A972;
+  border-radius: 4px;
+  margin-bottom: 60px;
+}
+.request-co__achtung-icon{
+  margin-right: 16px;
+  flex: none;
+  img {
+  width: 44px;
+  height: 44px;
+    display: block;
+  }
+}
+.request-co__achtung-text{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.1;
+  color: $dark-green;
+}
+.request-co__cta-btn{
+  margin-left: auto;
+}

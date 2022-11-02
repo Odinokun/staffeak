@@ -17,9 +17,13 @@
 .profile-bo__header-back {
   position: absolute;
   top: 0;
-  left: 40px;
+  left: 15px;
   display: flex;
   align-items: center;
+  @include min(769) {
+  left: 40px;
+
+  }
 
   @include min(1200) {
     left: 80px;

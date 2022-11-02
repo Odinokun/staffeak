@@ -6,7 +6,7 @@ block variables
 
 block content
   #main-wrap.main-wrap
-    include ../sections/header-co
+    include ../sections/header-bo-ava
 
     //begin content
     main.main
@@ -15,6 +15,11 @@ block content
         .container
           //BEGIN header
           .profile-co__header
+            a(href="#").profile-bo__header-back
+              .profile-bo__header-back-icon
+                +svg('arr-right')
+              span Back to all requests
+
             .profile-co__header-left
               h2.profile-co__header-title Lilu <span>Jonson</span>
               .profile-co__header-position
@@ -40,6 +45,7 @@ block content
           //BEGIN LEFT
           .profile-co__left
             .profile-co__ava
+              img(src="assets/img/profile-co-photo.jpg" alt="ava")
               .profile-co__ava-no
                 +svg('no-ava')
                 span No photo
@@ -55,51 +61,40 @@ block content
 
           //BEGIN RIGHT
           .profile-co__right
-            //BEGIN info
-            .profile-co__right-info
-              .profile-co__right-info-item
-                span Address
-                span 12345678, 888-00 Freedom Blvd, Thief World, California
-              .profile-co__right-info-item
-                span Miles available to commute
-                span 120 miles
-              .profile-co__right-info-item
-                span Education
-                span Massachusetts Institute of Technology. June 2020
-              .profile-co__right-info-item
-                span Phone
-                span 222 123 456 789
-              .profile-co__right-info-item
-                span Email
-                span lilu.jonson@gmail.com
-              .profile-co__right-info-item
-                span Date of Birth
-                span 06 december 1988
-            //END   info
+            //BEGIN profile-co__salary
+            .profile-co__salary.profile-co-salary.request-co__salary
+              .profile-co-salary__title Salary (hourly) rate if request till appointment:
+              ul.profile-co-salary__price-list
+                li.profile-co-salary__price-item
+                  span <strong>$</strong>45
+                li.profile-co-salary__price-item
+                  span <strong>$</strong>60
+                li.profile-co-salary__price-item
+                  span <strong>$</strong>90
+              ul.profile-co-salary__time-list
+                li.profile-co-salary__time-item
+                  +svg('right')
+                li.profile-co-salary__time-item
+                  span 48 h
+                li.profile-co-salary__time-item
+                  +svg('right')
+                li.profile-co-salary__time-item
+                  span 12 h
+                li.profile-co-salary__time-item
+                  +svg('right')
+            //END profile-co__salary
+
+            //BEGIN request-co__achtung
+            .request-co__achtung
+              .request-co__achtung-icon
+                img(src="assets/img/request-achtung.svg" alt="icon")
+              .request-co__achtung-text Additional information will be available after confirmation of the request by the contractor
+            //END   request-co__achtung
 
             .profile-co__footer
-              //BEGIN profile-co__salary
-              .profile-co__salary.profile-co-salary
-                .profile-co-salary__title Salary (hourly) rate if request till appointment:
-                ul.profile-co-salary__price-list
-                  li.profile-co-salary__price-item
-                    span <strong>$</strong>45
-                  li.profile-co-salary__price-item
-                    span <strong>$</strong>60
-                  li.profile-co-salary__price-item
-                    span <strong>$</strong>90
-                ul.profile-co-salary__time-list
-                  li.profile-co-salary__time-item
-                    +svg('right')
-                  li.profile-co-salary__time-item
-                    span 48 h
-                  li.profile-co-salary__time-item
-                    +svg('right')
-                  li.profile-co-salary__time-item
-                    span 12 h
-                  li.profile-co-salary__time-item
-                    +svg('right')
-              //END profile-co__salary
+              button.requests__btn.requests__btn--accept
+                span Accept
+                +svg('accept')
           //END   RIGHT
       //END   profile-co
 
