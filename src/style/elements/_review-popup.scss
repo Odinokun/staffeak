@@ -1,0 +1,143 @@
+.review-popup {
+  border-top: 1px solid #e7edf4;
+
+  &:last-child {
+    border-bottom: 1px solid #e7edf4;
+  }
+}
+
+.review-popup__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include min(941) {
+    flex-wrap: nowrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* begin AVA */
+.review-popup__ava {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  overflow: hidden;
+  flex: none;
+  width: 80px;
+  height: 85px;
+  margin-right: 20px;
+  border-radius: 16px;
+
+  @include min(941) {
+    position: relative;
+    top: 0;
+    width: 85px;
+    height: 90px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-position: center;
+    object-fit: contain;
+  }
+}
+
+/* end   AVA */
+
+/* begin INFO */
+.review-popup__info {
+  width: 100%;
+  margin-bottom: 17px;
+  padding-left: 100px;
+
+  @include min(941) {
+    margin-bottom: 0;
+    padding-right: 20px;
+    padding-left: 0;
+  }
+}
+
+.review-popup__info-title {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: $dark-green;
+
+  @include responsive-font(24, 20);
+}
+
+.review-popup__info-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 0;
+  color: $neutral-grey;
+}
+
+/* end   INFO */
+
+/* begin SCHEDULE */
+.review-popup__schedule {
+  flex: none;
+  width: 100%;
+  margin-bottom: 17px;
+  padding-left: 100px;
+
+  @include min(941) {
+    width: 180px;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  @include min(1025) {
+    width: 280px;
+  }
+}
+
+/* end   SCHEDULE */
+
+/* begin rating */
+.review-popup__rating {
+  flex: none;
+  width: 100%;
+  padding-left: 100px;
+
+  @include min(941) {
+    width: 120px;
+    padding-left: 0;
+  }
+}
+
+/* end   rating */
+
+.review-popup__bottom {
+  padding-bottom: 20px;
+
+  @include min(941) {
+    padding-bottom: 30px;
+  }
+}
+
+.review-popup__blockquote {
+  margin: 0;
+  padding: 0 0 0 100px;
+  background-position: 31px 0;
+
+  @include min(941) {
+    padding: 0 0 0 105px;
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: $neutral-grey;
+  }
+}

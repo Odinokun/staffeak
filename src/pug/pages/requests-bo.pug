@@ -27,11 +27,7 @@ mixin request(ava, name, position, btn, btnClass)
           .p-card__award-verif-icon
             img(src="assets/img/verificated.svg" alt="icon")
           .p-card__award-verif-text Verificated
-        .p-card__award-rait
-          .p-card__award-rait-icon
-            img(src="assets/img/star.svg" alt="icon")
-          .p-card__award-rait-text 4.97
-          a(href="#").p-card__award-rait-link (12)
+        include ../elements/award-rait
     //END   main
 
     //BEGIN btns

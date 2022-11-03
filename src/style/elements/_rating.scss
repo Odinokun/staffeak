@@ -2,6 +2,10 @@
   position: relative;
   display: block;
   overflow: hidden;
+
+  &--no-click {
+    pointer-events: none;
+  }
 }
 
 .rating {

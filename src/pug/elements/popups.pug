@@ -4,78 +4,98 @@
 #partner-popup.partner-popup.popup.bg-rounds
   .popup__close
     +svg('close')
-  .popup-container
-    h2.popup__title Became a partner
-    .popup__descr We are always excited to welcome new faces to our team. To become our partner in recruiting needs please send us information about yourself along with your resume. The most strongest candidates will posses a B.S. degree and have at least 2 years of recruiting experience.
-    //BEGIN popup__form
-    .popup__form
-      .popup__form-row
-        .input.popup__form-input
-          input(placeholder="Business name")
-          span Business name
-          span Some error text
-        .input.popup__form-input
-          input(placeholder="Phone number")
-          span Phone number
-          span Some error text
-      .popup__form-row
-        .input.popup__form-input
-          input(placeholder="Email")
-          span Email
-          span Some error text
-        .input.popup__form-input
-          input(placeholder="Website")
-          span Website
-          span Some error text
-      a(href="#").cta-btn.popup__cta-btn
-        span Become a sponsor
-        +svg('arr-right')
-    //END   popup__form
-    .popup__form-footer We look forward to working with you.
+  .popup__inn
+    .popup-container
+      h2.popup__title Became a partner
+      .popup__descr We are always excited to welcome new faces to our team. To become our partner in recruiting needs please send us information about yourself along with your resume. The most strongest candidates will posses a B.S. degree and have at least 2 years of recruiting experience.
+      //BEGIN popup__form
+      .popup__form
+        .popup__form-row
+          .input.popup__form-input
+            input(placeholder="Business name")
+            span Business name
+            span Some error text
+          .input.popup__form-input
+            input(placeholder="Phone number")
+            span Phone number
+            span Some error text
+        .popup__form-row
+          .input.popup__form-input
+            input(placeholder="Email")
+            span Email
+            span Some error text
+          .input.popup__form-input
+            input(placeholder="Website")
+            span Website
+            span Some error text
+        a(href="#").cta-btn.popup__cta-btn
+          span Become a sponsor
+          +svg('arr-right')
+      //END   popup__form
+      .popup__form-footer We look forward to working with you.
 //END   partner popup
 
 //BEGIN direct popup
 #direct-popup.direct-popup.popup.popup--sm.bg-rounds
   .popup__close
     +svg('close')
-  .popup-container
-    h2.popup__title Direct hire
-    .popup__descr Don't have time to search? Send a request and our manager will contact you and fill out an application for a quick search for the vacancy you need.
-    //BEGIN popup__form
-    .popup__form
-      .popup__form-row
-        .input.popup__form-input
-          input(placeholder="Phone number")
-          span Phone number
-          span Some error text
-      .popup__form-row
-        .input.popup__form-input
-          input(placeholder="Business name")
-          span Business name
-          span Some error text
-      a(href="#").cta-btn.popup__cta-btn
-        span Send request
-        +svg('arr-right')
-    //END   popup__form
+  .popup__inn
+    .popup-container
+      h2.popup__title Direct hire
+      .popup__descr Don't have time to search? Send a request and our manager will contact you and fill out an application for a quick search for the vacancy you need.
+      //BEGIN popup__form
+      .popup__form
+        .popup__form-row
+          .input.popup__form-input
+            input(placeholder="Phone number")
+            span Phone number
+            span Some error text
+        .popup__form-row
+          .input.popup__form-input
+            input(placeholder="Business name")
+            span Business name
+            span Some error text
+        a(href="#").cta-btn.popup__cta-btn
+          span Send request
+          +svg('arr-right')
+      //END   popup__form
 //END   direct popup
 
 //BEGIN view-more popup
 #view-more-popup.view-more-popup.popup
   .popup__close
     +svg('close')
-  .popup-container
-    .view-more-popup__icon
-      img(src="assets/img/info-icon.svg" alt="icon")
-    h2.view-more-popup__title To view all search results,<br>please login to your account or register
-    //BEGIN popup__form
-    .view-more-popup__btns
-      a(href="#").cta-btn.cta-btn--login
-        span Log in
-        +svg('arr-right')
-      .view-more-popup__btns-separ
-        span or
-      a(href="#").cta-btn
-        span Registration
-        +svg('arr-right')
-    //END   popup__form
+  .popup__inn
+    .popup-container
+      .view-more-popup__icon
+        img(src="assets/img/info-icon.svg" alt="icon")
+      h2.view-more-popup__title To view all search results,<br>please login to your account or register
+      //BEGIN popup__form
+      .view-more-popup__btns
+        a(href="#").cta-btn.cta-btn--login
+          span Log in
+          +svg('arr-right')
+        .view-more-popup__btns-separ
+          span or
+        a(href="#").cta-btn
+          span Registration
+          +svg('arr-right')
+      //END   popup__form
 //END   view-more popup
+
+//BEGIN partner popup
+#reviews-popup.reviews-popup.popup.popup--lg
+  .popup__close
+    +svg('close')
+  .popup__inn
+    .popup-container
+      .reviews-popup__header
+        .reviews-popup__title Reviews about <span>Lilu Jonson</span> <span>(12)</span>
+        include ../elements/award-rait
+      include ../elements/reviews/review-popup-01
+      include ../elements/reviews/review-popup-02
+      include ../elements/reviews/review-popup-03
+      include ../elements/reviews/review-popup-04
+      include ../elements/reviews/review-popup-05
+      include ../elements/reviews/review-popup-06
+//END   partner popup
