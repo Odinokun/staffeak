@@ -1,7 +1,6 @@
 .pricing {
   height: 100%;
 
-
   &::before {
     opacity: .05;
     background-size: cover;
@@ -19,6 +18,18 @@
   @include min(769) {
     margin-bottom: 40px;
     padding-top: 30px;
+  }
+}
+
+.pricing-page-top__subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+  color: $neutral-grey;
+
+  @include min(769) {
+    transform: translateY(-20px);
   }
 }
 
@@ -257,6 +268,10 @@
   color: $neutral-grey;
 
   @include responsive-font(20, 18);
+
+  span {
+    color: $main-green;
+  }
 
   a {
     text-decoration: underline;

@@ -1,6 +1,6 @@
-//BEGIN search-main
-form.search-main
-  .search-main__select
+//BEGIN search-contractor
+form.search-contractor
+  .search-contractor__select
     select
       option(value="State") State
       option(value="Alabama") Alabama
@@ -18,19 +18,27 @@ form.search-main
       option(value="North Carolina") North Carolina
       option(value="South Carolina") South Carolina
       option(value="Utah") Utah
-  .search-main__select
+  .search-contractor__select
     select
       option(value="Industry") Industry
-      option(value="Industry-01") Industry-01
-      option(value="Industry-02") Industry-02
-      option(value="Industry-03") Industry-03
-  .search-main__select
+      option(value="Finance") Finance
+      option(value="Finance 1") Finance 1
+      option(value="Finance 2") Finance 2
+      option(value="Finance 3") Finance 3
+  .search-contractor__select
     select
       option(value="Specialty") Specialty
       option(value="Specialty-01") Specialty-01
       option(value="Specialty-02") Specialty-02
       option(value="Specialty-03") Specialty-03
-  button.search-main__btn
+  .search-contractor__select
+    select
+      option(value="Type of work") Type of work
+      option(value="Full time") Full time
+      option(value="Part time") Part time
+  .search-contractor__select.calendar-input
+    input(name="datetimes" placeholder='Date and time' readonly)
+  button.search-contractor__btn.search-main__btn
     span Search
     +svg('magnify')
-//END   search-main
+//END   search-contractor

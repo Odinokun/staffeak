@@ -13,6 +13,8 @@ $(function() {
   require('./modules/slider-range-single')();
   require('./modules/filter')();
   require('./modules/rating')();
+  require('./modules/calendar')();
+  require('./modules/select')();
 
   // begin phone mask
   // require('./modules/maskedinput')();

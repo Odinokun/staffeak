@@ -1,0 +1,228 @@
+.daterangepicker {
+  border: 1px solid #e7edf4;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 24px 48px rgba(8, 28, 34, .08);
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+
+  .drp-calendar{
+    max-width: 100%;
+    @include min(600) {
+        max-width: 340px;
+    }
+  }
+  .drp-calendar.left {
+    padding: 24px 24px 8px 24px;
+    @include min(600) {
+    padding: 24px 12px 8px 24px;
+
+    }
+  }
+
+  .drp-calendar.right {
+
+    padding: 8px 24px;
+    @include min(600) {
+    padding: 24px 24px 8px 12px;
+
+    }
+
+    .calendar-time::after {
+      @include min(600) {
+        left: -12px;
+      }
+    }
+  }
+
+  //arrows
+  th.next,
+  th.prev {
+    &:hover {
+      background-color: #fff;
+
+      span {
+        border-color: $main-green;
+      }
+    }
+  }
+
+  //sells
+  .calendar-table td,
+  .calendar-table th {
+    width: 42px;
+    height: 32px;
+  }
+
+  //name of month
+  th.month {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.1;
+    user-select: none;
+    color: $dark-green;
+  }
+
+  //name of days
+  th {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+    user-select: none;
+    text-align: center;
+    color: $dark-green;
+  }
+
+  //dates
+  td {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+    color: $neutral-grey;
+  }
+
+  //period
+  td.in-range,
+  td.in-range:hover {
+    color: $dark-green;
+    background-color: $fresh-mint;
+  }
+
+  //start/end days of period
+  td.active,
+  td.active:hover {
+    color: $dark-green;
+    background-color: $main-green !important;
+  }
+
+  //start day
+  td.start-date {
+    border-radius: 16px 0 0 16px;
+  }
+
+  //end day
+  td.end-date {
+    border-radius: 0 16px 16px 0;
+  }
+
+  //cells hover
+  td.available:hover,
+  th.available:hover {
+    background-color: $fresh-mint;
+  }
+
+  //cells dont active
+  td.off {
+    //opacity: 0;
+    pointer-events: none;
+  }
+
+  //times
+  .calendar-time {
+    position: relative;
+    padding-top: 8px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 1px;
+      margin: auto;
+      content: '';
+      background-color: $light-grey;
+      @include min(600) {
+      width: calc(100% + 12px);
+
+      }
+    }
+
+    select {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1;
+      height: 32px;
+      text-align: center;
+      color: $dark-green;
+      border: 1px solid $light-grey;
+      border-radius: 16px !important;
+      background: #f8f8fc;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
+
+  //footer
+  .drp-buttons {
+    position: relative;
+    padding: 17px 24px 24px 24px;
+    border: none;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 48px;
+      bottom: 0;
+      width: 14px;
+      height: 12px;
+      margin: auto;
+      content: '';
+      transform: translateY(-3px);
+      pointer-events: none;
+      background-image: url('../img/arr-right.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: calc(100% - 48px);
+      height: 1px;
+      margin: auto;
+      content: '';
+      background-color: $light-grey;
+    }
+  }
+
+  //apply btn
+  .btn.btn-primary {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    padding-left: 24px;
+    text-align: left;
+    color: $deep-green;
+    border: none;
+    border-radius: 30px !important;
+    background-image: linear-gradient(90deg, #0ad582 0%, #a2f2c0 100%);
+  }
+
+  .drp-selected,
+  .cancelBtn {
+    display: none;
+  }
+}

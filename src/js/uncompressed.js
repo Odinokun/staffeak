@@ -32,6 +32,8 @@ $(document).ready(function ($) {
     'request-co-wait',
     'request-co-accept',
     'request-co-review',
+    'search-bo',
+    'search-bo-res',
     ]);
 });
 

@@ -9,11 +9,13 @@
 @import 'elements/menu-btn';
 @import 'elements/btns';
 @import 'elements/search-main';
+@import 'elements/search-contractor';
 @import 'elements/popup';
 @import 'elements/p-card';
 @import 'elements/slider-range-single-list';
 @import 'elements/rating';
 @import 'elements/review-popup';
+@import 'elements/datapicker';
 
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
@@ -61,3 +63,5 @@
 @import 'pages/requests';
 @import 'pages/request';
 @import 'pages/profile-bo';
+@import 'pages/search-bo';
+@import 'pages/search-bo-res';

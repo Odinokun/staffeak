@@ -1,0 +1,36 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header-bo-ava
+
+    //begin content
+    main.main
+      .search-bo.bg-rounds
+        //BEGIN page-top
+        .page-top.pricing-page-top
+          .container
+            h2.page-top__title.pricing-page-top__title Search Contractor
+            .pricing-page-top__subtitle Unlike traditional staffing agencies, we connect you directly with professional staff
+        //END   page-top
+
+        //BEGIN search-bo body
+        .search-bo__body
+          .container
+            include ../elements/search-contractor
+        //END   search-bo body
+
+        //BEGIN pricing__footer
+        .pricing__footer
+          .container
+            .pricing__footer-text Over <span>500,000</span> different temp staff <br> in USA are looking for a work everyday
+        //END   pricing__footer
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts

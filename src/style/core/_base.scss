@@ -203,6 +203,7 @@ button {
   }
 
   select {
+  cursor: pointer;
     position: relative;
     padding-top: 4px;
     padding-left: 23px;
@@ -210,11 +211,11 @@ button {
 
     -webkit-appearance: none;
     -moz-appearance: none;
-  }
-}
 
-select::-ms-expand {
-  display: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
 }
 
 .input.error input,
@@ -542,6 +543,7 @@ svg {
     opacity: 1;
     background-image: url('../img/bg-top.svg');
     background-position: 50% 50%;
+    background-size: cover;
   }
 }
 

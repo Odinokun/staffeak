@@ -1,0 +1,91 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.search-no-res-page-top
+        .container
+          .search-no-res-page-top__title-wrap
+            a(href="#").search-no-res-page-top__back-btn
+              +svg('arr-right')
+            h2.page-top__title.search-no-res-page-top__title Result
+          .search-no-res-page-top__descr We are finded <span>1,208</span> temp staff for your company
+      //END   page-top
+
+      //BEGIN search-filter
+      form.search-filter-res
+        .container
+          .select.search-filter-res__select
+            select
+              option(value="State") State
+              option(value="Alabama") Alabama
+              option(value="Nebraska") Nebraska
+              option(value="Virginia") Virginia
+              option(value="New Hampshire") New Hampshire
+              option(value="Massachusetts") Massachusetts
+              option(value="Rhode Island") Rhode Island
+              option(value="Connecticut") Connecticut
+              option(value="New York") New York
+              option(value="New Jersey") New Jersey
+              option(value="Pennsylvania") Pennsylvania
+              option(value="Delaware") Delaware
+              option(value="Maryland") Maryland
+              option(value="North Carolina") North Carolina
+              option(value="South Carolina") South Carolina
+              option(value="Utah") Utah
+            span State
+            span Some error text
+          .select.search-filter-res__select
+            select
+              option(value="Industry") Industry
+              option(value="Finance") Finance
+              option(value="Finance 1") Finance 1
+              option(value="Finance 2") Finance 2
+              option(value="Finance 3") Finance 3
+            span Industry
+            span Some error text
+          .select.search-filter-res__select
+            select
+              option(value="Specialty") Specialty
+              option(value="Specialty 1") Specialty 1
+              option(value="Specialty 2") Specialty 2
+              option(value="Specialty 3") Specialty 3
+            span Specialty
+            span Some error text
+          .select.search-filter-res__select
+            select
+              option(value="Type of work") Type of work
+              option(value="Full time") Full time
+              option(value="Part time") Part time
+            span Type of work
+            span Some error text
+
+          .input.calendar-input
+            input(name="datetimes" placeholder='Date and time' readonly)
+            span Date and time
+            span Some error text
+      //END   search-filter
+      //BEGIN search-no-reg
+      .search-no-reg
+        .container
+          //BEGIN list
+          .search-no-reg__list
+            include ../elements/p-cards/p-card-01
+            include ../elements/p-cards/p-card-02
+            include ../elements/p-cards/p-card-03
+          //END   list
+          include ../elements/buttons/view-more-btn
+      //END   search-no-reg
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts
