@@ -23,6 +23,15 @@
   padding-bottom: 100px;
 }
 
+.subscription__achtung {
+  max-width: 690px;
+  padding-top: 30px;
+
+  .profile-bo__achtung-text {
+    padding-right: 0;
+  }
+}
+
 /* begin INFO */
 .subscription__info {
   display: flex;
