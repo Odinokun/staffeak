@@ -21,6 +21,52 @@
   @include responsive-font(44, 32);
 }
 
+.index-text__title-link {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  overflow: hidden;
+  align-items: center;
+  width: 0;
+  height: 42px;
+  margin-right: -13px;
+  padding: 0;
+  transition: .5s;
+  transform: translateY(-2px) scale(0);
+  text-align: center;
+  white-space: nowrap;
+  color: $deep-green;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background-image: url('../img/arr-right.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+
+  @include min(600) {
+    transform: translateY(-9px) scale(0);
+  }
+  @include min(1200) {
+    transform: translateY(-13px) scale(0);
+  }
+
+  &.active {
+    width: 190px;
+    margin-right: 0;
+    padding-right: 45px;
+    padding-left: 20px;
+    transform: translateY(-2px) scale(1);
+    border-color: #0ad582;
+
+    @include min(600) {
+      transform: translateY(-9px) scale(1);
+    }
+    @include min(1200) {
+      transform: translateY(-13px) scale(1);
+    }
+  }
+}
+
 .index-text__footer {
   display: flex;
   align-items: center;

@@ -4,6 +4,7 @@ $(function() {
   require('./modules/menu')();
   require('./modules/swiper')();
   require('./modules/text-anim')();
+  require('./modules/btn-anim')();
   require('./modules/tabs')();
   require('./modules/accordion')();
   require('./modules/popup')();
@@ -16,9 +17,4 @@ $(function() {
   require('./modules/calendar')();
   require('./modules/select')();
 
-  // begin phone mask
-  // require('./modules/maskedinput')();
-
-  // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
 });
