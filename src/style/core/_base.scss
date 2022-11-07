@@ -203,10 +203,10 @@ button {
   }
 
   select {
-  cursor: pointer;
     position: relative;
     padding-top: 4px;
     padding-left: 23px;
+    cursor: pointer;
     color: #63767e;
 
     -webkit-appearance: none;
@@ -439,6 +439,62 @@ button {
 }
 
 /* end   CHECKBOX */
+
+/* begin CHECK */
+.check {
+  position: relative;
+  overflow: hidden;
+  flex: none;
+  width: 76px;
+  height: 40px;
+
+  input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  span {
+    display: block;
+    width: 76px;
+    height: 40px;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 20px;
+    background-color: $neutral-white;
+    border: 1px solid $light-grey;
+
+    &::before {
+      position: absolute;
+      top: 2px;
+      left: 3px;
+      width: 36px;
+      height: 36px;
+      content: '';
+      transition: .5s;
+      border-radius: 50%;
+      background-color: $neutral-grey;
+    }
+  }
+}
+
+.check input:checked + span {
+  background-color: $main-green;
+  border-color: transparent;
+
+  &::before {
+    left: 38px;
+    background-color: #fff;
+  }
+}
+
+/* end   CHECK */
 
 svg {
   display: block;

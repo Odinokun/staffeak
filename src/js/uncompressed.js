@@ -34,6 +34,7 @@ $(document).ready(function ($) {
     'request-co-review',
     'search-bo',
     'search-bo-res',
+    'subscribe',
     ]);
 });
 
