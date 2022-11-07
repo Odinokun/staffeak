@@ -1,0 +1,123 @@
+extends ../_template
+
+block variables
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+
+mixin item(icon, period, cost)
+  .pricing__item-wrap
+    input(type='radio' name="pricing").pricing__radio
+    .pricing__item
+      .pricing__icon
+        img(src="assets/img/pricing-icon-" + icon + ".svg" alt="icon")
+      .pricing__period #{period}
+      .pricing__cost #{cost}
+      .pricing__often per month
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header-bo-ava
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.bg-rounds.subscribe-page-top
+        .container
+          h2.page-top__title Subscription
+      //END   page-top
+
+      //BEGIN subscription
+      .subscription
+        .container
+          //BEGIN subscription__info
+          .subscription__info
+            //BEGIN left
+            .subscription__info-left
+              .subscription__info-row
+                span ID
+                span 000000000088
+              .subscription__info-row
+                span Customer
+                span Jack Jonson
+              .subscription__info-row
+                span Current period
+                span Waiting
+              .subscription__info-row
+                span Created
+                span 06 June 2022
+              .subscription__info-row.subscription__info-row--status
+                span Status
+                span Active
+            //END   left
+
+            //BEGIN right
+            .subscription__info-right
+              form.subscription__add-card
+                .subscription__add-card-title Add card
+                .input
+                  input(placeholder="Card Number")
+                  span Card Number
+                  span Some error text
+                .subscription__add-card-row
+                  .input
+                    input(placeholder="DD / YY")
+                    span DD / YY
+                    span Some error text
+                  .input
+                    input(placeholder="CVC")
+                    span CVC
+                    span Some error text
+                  .input
+                    input(placeholder="ZIP code")
+                    span ZIP code
+                    span Some error text
+                button.cta-btn.subscription__add-card-cta-btn
+                  span Add card
+                  +svg('arr-right')
+            //END   right
+          //END   subscription__info
+
+          //BEGIN subscription__plan
+          .subscription__plan
+            h3.cabinet__title Subscription Plan
+            //BEGIN pricing__list
+            .cabinet__pricing-list
+              +item('02', '3 month', '$99.99')
+              +item('03', '6 month', '$89.99')
+              +item('04', '12 month', '$79.99')
+            //END   pricing__list
+            .subscription__plan-footer
+              .subscription__plan-check
+                .check
+                  input(type='checkbox' name='auto-subscribe')
+                  span
+                .subscription__plan-check-text Auto renew subscription
+              button.cta-btn.subscription__plan-cta-btn
+                span Save
+                +svg('arr-right')
+          //END   subscription__plan
+
+          //BEGIN subscription__invoices
+          .subscription__invoices
+            h3.cabinet__title Invoices
+            .subscription__invoices-table-wrap
+              .subscription__invoices-table
+                .subscription__invoices-table-header
+                  .subscription__invoices-th Amount
+                  .subscription__invoices-th Date
+                  .subscription__invoices-th Card
+                  .subscription__invoices-th Status
+                  .subscription__invoices-th Invoice
+                .subscription__invoices-table-row
+                  .subscription__invoices-td No payments yet.
+                  .subscription__invoices-td
+                  .subscription__invoices-td
+                  .subscription__invoices-td
+                  .subscription__invoices-td
+          //END   subscription__invoices
+      //END   subscription
+    //end content
+
+    include ../sections/footer
+    include ../elements/popups
+    include ../sections/scripts

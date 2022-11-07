@@ -35,6 +35,7 @@ $(document).ready(function ($) {
     'search-bo',
     'search-bo-res',
     'subscribe',
+    'subscribe-edit',
     ]);
 });
 
