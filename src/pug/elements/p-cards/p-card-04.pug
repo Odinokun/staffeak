@@ -1,0 +1,36 @@
+//BEGIN p-card
+.p-card
+  //BEGIN ava
+  .p-card__ava
+    img(src="assets/img/results/res-04.jpg" alt="ava")
+  //END   ava
+
+  //BEGIN main
+  .p-card__main
+    .p-card__name Lilu Jonson
+    .p-card__position
+      span Finance
+      span Accounting and audit
+    .p-card__about
+      span 4+ years of experience
+      span Alabama, Dreamland
+      span Salary range $40
+    .p-card__awards
+      .p-card__award-verif
+        .p-card__award-verif-icon
+          img(src="assets/img/verificated.svg" alt="icon")
+        .p-card__award-verif-text Verificated
+      include ../award-rait
+  //END   main
+
+  //BEGIN btns
+  .p-card__btns
+    a(href="#").p-card-download-cv.download-cv
+      .p-card-download-cv-text Download CV <span>Lilu Jonson</span>
+      .p-card-download-cv-icon
+        img(src="assets/img/file.svg" alt="icon")
+    button.cta-btn.p-card__cta-btn
+      span Send request
+      +svg('arr-right')
+  //END   btns
+//END   p-card

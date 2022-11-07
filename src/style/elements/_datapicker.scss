@@ -1,8 +1,22 @@
 .daterangepicker {
+  overflow: auto;
+  width: 278px;
+  max-height: 90vh;
   border: 1px solid #e7edf4;
   border-radius: 4px;
   background: #fff;
   box-shadow: 0 24px 48px rgba(8, 28, 34, .08);
+
+  @include max(1024) {
+    position: fixed;
+    top: 50% !important;
+    right: auto !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+  }
+  @include min(710) {
+    width: 674px;
+  }
 
   &::before,
   &::after {
@@ -10,30 +24,31 @@
   }
 
 
-  .drp-calendar{
+  .drp-calendar {
     max-width: 100%;
-    @include min(600) {
-        max-width: 340px;
+
+    @include min(710) {
+      max-width: 340px;
     }
   }
+
   .drp-calendar.left {
     padding: 24px 24px 8px 24px;
-    @include min(600) {
-    padding: 24px 12px 8px 24px;
 
+    @include min(710) {
+      padding: 24px 12px 8px 24px;
     }
   }
 
   .drp-calendar.right {
-
     padding: 8px 24px;
-    @include min(600) {
-    padding: 24px 24px 8px 12px;
 
+    @include min(710) {
+      padding: 24px 24px 8px 12px;
     }
 
     .calendar-time::after {
-      @include min(600) {
+      @include min(710) {
         left: -12px;
       }
     }
@@ -140,9 +155,9 @@
       margin: auto;
       content: '';
       background-color: $light-grey;
-      @include min(600) {
-      width: calc(100% + 12px);
 
+      @include min(710) {
+        width: calc(100% + 12px);
       }
     }
 
@@ -152,7 +167,8 @@
       font-weight: 500;
       line-height: 1;
       height: 32px;
-      text-align: center;
+      text-align: center !important;
+      padding: 5px 15px;
       color: $dark-green;
       border: 1px solid $light-grey;
       border-radius: 16px !important;

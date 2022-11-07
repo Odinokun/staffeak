@@ -99,3 +99,14 @@
       include ../elements/reviews/review-popup-05
       include ../elements/reviews/review-popup-06
 //END   partner popup
+
+//BEGIN filter popup
+#filter-popup.filter-popup.popup.popup--lg.bg-rounds
+  .popup__close
+    +svg('close')
+  .popup__inn
+    .popup-container
+      .filter-popup__header
+        .filter-popup__title Filter
+      include search-filter
+//END   filter popup

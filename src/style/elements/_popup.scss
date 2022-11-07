@@ -18,13 +18,12 @@
   display: none;
   overflow: auto;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 60px);
   transform: translate(-50%, -50%);
   background: #fff;
 
   @include min(600) {
     width: calc(100% - 60px);
-    height: calc(100vh - 60px);
     border-radius: 16px;
   }
 
@@ -309,3 +308,30 @@
 }
 
 /* end   REVIEWS */
+
+/* begin FILTER */
+.filter-popup {
+  background-color: $neutral-white;
+}
+
+.filter-popup__header {
+  display: flex;
+  align-items: center;
+}
+
+.filter-popup__title {
+  font-weight: 500;
+  line-height: 1.1;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding-right: 15px;
+  color: $dark-green;
+
+  @include responsive-font(44, 32);
+
+  span {
+    color: $main-green;
+  }
+}
+
+/* end   FILTER */

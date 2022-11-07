@@ -6,7 +6,7 @@ block variables
 
 block content
   #main-wrap.main-wrap
-    include ../sections/header
+    include ../sections/header-bo-ava
 
     //begin content
     main.main
@@ -20,69 +20,51 @@ block content
           .search-no-res-page-top__descr We are finded <span>1,208</span> temp staff for your company
       //END   page-top
 
-      //BEGIN search-filter
-      form.search-filter-res
+      //BEGIN search-filter-sec
+      .search-filter-sec
         .container
-          .select.search-filter-res__select
-            select
-              option(value="State") State
-              option(value="Alabama") Alabama
-              option(value="Nebraska") Nebraska
-              option(value="Virginia") Virginia
-              option(value="New Hampshire") New Hampshire
-              option(value="Massachusetts") Massachusetts
-              option(value="Rhode Island") Rhode Island
-              option(value="Connecticut") Connecticut
-              option(value="New York") New York
-              option(value="New Jersey") New Jersey
-              option(value="Pennsylvania") Pennsylvania
-              option(value="Delaware") Delaware
-              option(value="Maryland") Maryland
-              option(value="North Carolina") North Carolina
-              option(value="South Carolina") South Carolina
-              option(value="Utah") Utah
-            span State
-            span Some error text
-          .select.search-filter-res__select
-            select
-              option(value="Industry") Industry
-              option(value="Finance") Finance
-              option(value="Finance 1") Finance 1
-              option(value="Finance 2") Finance 2
-              option(value="Finance 3") Finance 3
-            span Industry
-            span Some error text
-          .select.search-filter-res__select
-            select
-              option(value="Specialty") Specialty
-              option(value="Specialty 1") Specialty 1
-              option(value="Specialty 2") Specialty 2
-              option(value="Specialty 3") Specialty 3
-            span Specialty
-            span Some error text
-          .select.search-filter-res__select
-            select
-              option(value="Type of work") Type of work
-              option(value="Full time") Full time
-              option(value="Part time") Part time
-            span Type of work
-            span Some error text
+          .search-filter-sec-mob
+            .search-filter-btn.popup-open(data-popup="filter-popup")
+              span Filter
+              +svg('filter')
+          .search-filter-sec-desk
+              include ../elements/search-filter
+      //END   search-filter-sec
 
-          .input.calendar-input
-            input(name="datetimes" placeholder='Date and time' readonly)
-            span Date and time
-            span Some error text
-      //END   search-filter
+
+      //BEGIN sponsors
+      .sponsors
+        .container
+          #sponsors__slider.sponsors__slider
+            .swiper-wrapper
+              .swiper-slide.sponsors__slide
+                include ../elements/p-cards/p-card-01
+                include ../elements/p-cards/p-card-02
+                include ../elements/p-cards/p-card-03
+                include ../elements/p-cards/p-card-04
+                include ../elements/p-cards/p-card-05
+              .swiper-slide.sponsors__slide
+                include ../elements/p-cards/p-card-04
+                include ../elements/p-cards/p-card-02
+                include ../elements/p-cards/p-card-05
+                include ../elements/p-cards/p-card-03
+                include ../elements/p-cards/p-card-01
+              .swiper-slide.sponsors__slide
+                include ../elements/p-cards/p-card-05
+                include ../elements/p-cards/p-card-02
+                include ../elements/p-cards/p-card-03
+                include ../elements/p-cards/p-card-01
+            .swiper-pagination
+      //END   sponsors
+
+
+
       //BEGIN search-no-reg
-      .search-no-reg
+      //.search-no-reg
         .container
           //BEGIN list
           .search-no-reg__list
-            include ../elements/p-cards/p-card-01
-            include ../elements/p-cards/p-card-02
-            include ../elements/p-cards/p-card-03
           //END   list
-          include ../elements/buttons/view-more-btn
       //END   search-no-reg
     //end content
 

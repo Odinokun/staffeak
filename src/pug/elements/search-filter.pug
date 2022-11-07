@@ -1,0 +1,48 @@
+//BEGIN search-filter
+form.search-filter
+  .search-filter__select
+    select
+      option(value="State") State
+      option(value="Alabama") Alabama
+      option(value="Nebraska") Nebraska
+      option(value="Virginia") Virginia
+      option(value="New Hampshire") New Hampshire
+      option(value="Massachusetts") Massachusetts
+      option(value="Rhode Island") Rhode Island
+      option(value="Connecticut") Connecticut
+      option(value="New York") New York
+      option(value="New Jersey") New Jersey
+      option(value="Pennsylvania") Pennsylvania
+      option(value="Delaware") Delaware
+      option(value="Maryland") Maryland
+      option(value="North Carolina") North Carolina
+      option(value="South Carolina") South Carolina
+      option(value="Utah") Utah
+  .search-filter__select
+    select
+      option(value="Industry") Industry
+      option(value="Finance") Finance
+      option(value="Finance 1") Finance 1
+      option(value="Finance 2") Finance 2
+      option(value="Finance 3") Finance 3
+  .search-filter__select
+    select
+      option(value="Specialty") Specialty
+      option(value="Specialty-01") Specialty-01
+      option(value="Specialty-02") Specialty-02
+      option(value="Specialty-03") Specialty-03
+  .search-filter__select
+    select
+      option(value="Type of work") Type of work
+      option(value="Full time") Full time
+      option(value="Part time") Part time
+
+  .search-filter__select.calendar-input
+    input(name="datetimes" placeholder='Date and time' readonly)
+
+  button.search-filter__btn.search-main__btn
+    span Search
+    +svg('magnify')
+
+  .search-filter__reset Reset to default
+//END   search-filter

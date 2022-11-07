@@ -1,19 +1,22 @@
 .search-bo {
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  display: flex;flex-direction: column;
   background-color: $neutral-white;
+
   &::before {
     opacity: .05;
     background-size: cover;
   }
 }
-.search-bo__body{
+
+.search-bo__body {
   margin-bottom: auto;
 }
 
 .search-filter {
-  width: 100%;
   display: flex;
+  width: 100%;
   margin-bottom: auto;
 
   .select,
@@ -30,8 +33,8 @@
 
     input,
     select {
-    background-color: #fff;
       height: 48px;
+      background-color: #fff;
     }
   }
 }
