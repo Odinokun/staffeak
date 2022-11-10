@@ -58,7 +58,7 @@
   th.next,
   th.prev {
     &:hover {
-      background-color: #fff;
+      background-color: #fff !important;
 
       span {
         border-color: $main-green;
@@ -142,6 +142,7 @@
   }
 
   //times
+  .month,
   .calendar-time {
     position: relative;
     padding-top: 8px;
@@ -182,6 +183,14 @@
       }
     }
   }
+  //month + year
+  .month{
+    padding-top: 0;
+    &::after {
+      display: none;
+    }
+  }
+
 
   //footer
   .drp-buttons {
@@ -241,4 +250,8 @@
   .cancelBtn {
     display: none;
   }
+}
+
+.daterangepicker.single {
+  width: 278px !important;
 }

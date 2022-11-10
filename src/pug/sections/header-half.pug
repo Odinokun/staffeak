@@ -1,0 +1,14 @@
+//BEGIN header
+header#header.header.header--half
+  .container
+    include ../elements/logo
+    include ../elements/menu
+    .header__right
+      button.header__login
+        +svg('person')
+        .header__login-text Login / Registration
+      button.btn-with-icon.header__partner-btn.popup-open(data-popup="partner-popup")
+        |Become a partner
+        +svg('arr-right')
+    include ../elements/buttons/menu-btn-dark
+//END   header

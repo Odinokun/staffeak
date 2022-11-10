@@ -16,5 +16,6 @@ $(function() {
   require('./modules/rating')();
   require('./modules/calendar')();
   require('./modules/select')();
+  require('./modules/disabled-submit')();
 
 });

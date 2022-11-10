@@ -1,12 +1,10 @@
 //BEGIN header
-header#header.header.header--bo
+header#header.header.header--co.header--co-no-reg
   .container
     include ../elements/logo
-    include ../elements/menu-bo
-    include ../elements/buttons/direct-btn-header
     .header__user
       a(href="#").header__user-ava
-        span B
+        span C
       //BEGIN header__user-menu
       .header__user-menu-wrap
         .header__user-menu
@@ -26,10 +24,8 @@ header#header.header.header--bo
           a(href="#").header__settings-link Edit profile
         li.header__settings-item
           a(href="#").header__settings-link Change password
-        li.header__settings-item
-          a(href="#").header__settings-link Subscription
       button.header__login
         +svg('person')
         .header__login-text Log out
-    include ../elements/buttons/menu-btn-bo
+    include ../elements/buttons/menu-btn-co
 //END   header

@@ -71,6 +71,7 @@
     height: 8px;
     margin: auto;
     content: '';
+    pointer-events: none;
     border-top: 6px solid $neutral-grey;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;

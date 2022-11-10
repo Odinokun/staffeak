@@ -1,4 +1,5 @@
-.header--co {
+.header--co,
+.header--bo {
   .container {
     max-width: 100%;
 
@@ -6,6 +7,16 @@
       padding-right: 40px;
       padding-left: 40px;
     }
+  }
+}
+
+.header--co-no-reg {
+  .header__user::before {
+    display: none;
+  }
+
+  .header__settings {
+    margin-top: auto;
   }
 }
 

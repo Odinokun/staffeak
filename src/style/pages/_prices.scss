@@ -1,4 +1,6 @@
 .pricing {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 
   &::before {
@@ -251,6 +253,7 @@
 }
 
 .pricing__footer {
+  margin-top: auto;
   margin-bottom: 100px;
 
   .container {

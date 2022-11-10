@@ -6,7 +6,7 @@ block variables
 
 block content
   #main-wrap.main-wrap
-    include ../sections/header-co
+    include ../sections/header-co-no-reg
 
     //begin content
     main.main
@@ -26,6 +26,7 @@ block content
               .sign-up-co__ava-text
                 span Upload your photo
                 span (jpg, jpeg, png, gif)<br>size less than 2Mb
+              input.sign-up-co__ava-input(type='file')
 
             include ../elements/download
             button.download-more add one more
@@ -50,8 +51,8 @@ block content
                   input(placeholder="What school you attend")
                   span What school you attend
                   span Some error text
-                .input
-                  input(placeholder="Date of graduation")
+                .input.calendar-graduation-input
+                  input(placeholder='Date of graduation' readonly)
                   span Date of graduation
                   span Some error text
               .cabinet__input-row
@@ -64,8 +65,8 @@ block content
                   span Phone
                   span Some error text
               .cabinet__input-row
-                .input
-                  input(placeholder="Birthday")
+                .input.calendar-graduation-input
+                  input(placeholder='Birthday' readonly)
                   span Birthday
                   span Some error text
                 .select

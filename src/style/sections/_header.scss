@@ -57,8 +57,7 @@
     }
 
     .menu,
-    .menu--co,
-    .direct-btn {
+    .menu--co {
       transition: .5s .4s;
       pointer-events: auto;
       opacity: 1;
@@ -200,48 +199,29 @@
   color: $neutral-white;
 }
 
-/* begin DIRECT BTN */
-.header {
-  .direct-btn {
-    position: static;
-    margin-top: -20px;
-    margin-bottom: 50px;
-    transform: translate(0);
-    pointer-events: none;
-    opacity: 0;
-    border: 2px solid $neutral-white;
-    background-color: transparent;
-    background-image: none;
-    @include min(600) {
-    margin-top: -70px;
+/* begin HALF */
+.header--half {
+  .container {
+    max-width: 100%;
 
+    @include min(769) {
+      padding-right: 40px;
+      padding-left: 40px;
     }
+  }
 
+  .menu {
     @include min(1025) {
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 30px;
-      pointer-events: auto;
-      opacity: 1;
-      border: 2px solid $dark-green;
+      margin-left: auto;
     }
+  }
 
-    span {
-      color: $neutral-white;
-
-      @include min(1025) {
-        color: $dark-green;
-      }
-    }
-
-    svg {
-      fill: $main-green;
-
-      @include min(1025) {
-        fill: $dark-green;
-      }
+  .header__right {
+    @include min(1025) {
+      justify-content: flex-end;
+      width: calc(50% + 25px);
     }
   }
 }
 
-/* end   DIRECT BTN */
+/* end   HALF */

@@ -20,11 +20,10 @@
   left: 15px;
   display: flex;
   align-items: center;
+
   @include min(769) {
-  left: 40px;
-
+    left: 40px;
   }
-
   @include min(1200) {
     left: 80px;
   }
@@ -225,6 +224,7 @@
       color: $neutral-grey;
     }
 
+    a,
     &:nth-child(2) {
       font-size: 16px;
       color: $dark-green;

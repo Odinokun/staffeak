@@ -16,7 +16,7 @@ mixin item(icon, period, cost)
 
 block content
   #main-wrap.main-wrap
-    include ../sections/header-bo
+    include ../sections/header-bo-no-reg
 
     //begin content
     main.main
@@ -36,6 +36,7 @@ block content
               .sign-up-co__ava-text
                 span Upload your photo
                 span (jpg, jpeg, png, gif)<br>size less than 2Mb
+              input.sign-up-co__ava-input(type='file')
           //END   LEFT
 
           //BEGIN RIGHT

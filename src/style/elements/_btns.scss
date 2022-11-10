@@ -247,3 +247,17 @@
     transition: .5s;
   }
 }
+
+.btn,
+.cta-btn,
+.direct-btn,
+.restore-btn,
+.download-cv,
+.btn-with-icon,
+.view-more-btn,
+.search-main__btn,
+.direct-btn-header {
+  &.disabled {
+    pointer-events: none;
+  }
+}

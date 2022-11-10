@@ -3,18 +3,21 @@
   font-size: 16px;
   font-weight: 600;
   font-style: normal;
-  line-height: 1;
-  position: absolute;
-  right: 15px;
+  position: sticky;
+  z-index: 1;
   bottom: 0;
-  display: inline-flex;
+  left: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  margin-top: -50px;
+  margin-right: 15px;
+  margin-left: auto;
   padding: 16px 24px;
   cursor: pointer;
   user-select: none;
-  transform: translateY(50%);
+  transform: translateY(-15px);
   white-space: nowrap;
   text-decoration: none;
   color: $deep-green;
@@ -23,11 +26,9 @@
   background: $gradient;
   box-shadow: 0 12px 48px rgba(8, 28, 34, .16);
 
-  @include min(769) {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    transform: translateY(0);
+  @include min(1025) {
+    margin-right: 40px;
+    transform: translateY(-40px);
   }
 
   &.active {
@@ -58,18 +59,5 @@
     height: 12px;
     margin-left: 10px;
     transition: $transition;
-  }
-}
-
-.double-page {
-  .direct-btn {
-    right: 15px;
-    bottom: 15px;
-    transform: translateY(0);
-
-    @include min(769) {
-      right: 15px;
-      bottom: 40px;
-    }
   }
 }

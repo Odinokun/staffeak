@@ -11,6 +11,7 @@
   width: 163px;
   height: 163px;
   margin-bottom: 30px;
+  user-select: none;
   text-align: center;
   border: 1px dashed #63767e;
   border-radius: 16px;
@@ -36,6 +37,17 @@
       padding-top: 16px;
     }
   }
+}
+
+.sign-up-co__ava-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+  opacity: 0;
 }
 
 .sign-up-co__ava.edit {
