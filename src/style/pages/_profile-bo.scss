@@ -330,13 +330,14 @@
   position: relative;
   display: flex;
   width: 100%;
-  padding: 17px 30px 50px 30px;
+  //padding: 17px 30px 50px 30px;
   border-radius: 4px;
   background: rgba(242, 162, 162, .25);
-
-  @include min(600) {
-    align-items: center;
+flex-wrap: wrap;
     padding: 17px 30px;
+  @include min(600) {
+    flex-wrap: nowrap;
+    align-items: center;
   }
 }
 
@@ -358,11 +359,12 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 1.1;
-  width: 100%;
   padding: 0 0 5px 20px;
   color: $dark-green;
+  width: calc(100% - 50px);
 
   @include min(600) {
+  width: 100%;
     padding: 10px 20px;
   }
 }
@@ -371,9 +373,11 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.1;
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
+  //position: absolute;
+  //right: 30px;
+  text-align: right;
+  //bottom: 30px;
+   width: 100%;
   display: block;
   flex: none;
   margin-left: auto;

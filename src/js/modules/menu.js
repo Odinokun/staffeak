@@ -8,4 +8,16 @@ module.exports = function () {
     $('#main-wrap').toggleClass('no-scroll');
   })
 
+  $(document).keyup((e) => {
+    if (e.keyCode === 27) {
+      closeMenu();
+    }
+  });
+
+  function closeMenu(){
+    $('.menu-btn').removeClass('open');
+    $('#header').removeClass('open');
+    $('#main-wrap').removeClass('no-scroll');
+  }
+
 };

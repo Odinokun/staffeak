@@ -12,7 +12,7 @@
   background-color: transparent;
 
   @include min(1025) {
-    height: auto;
+    height: auto ;
   }
 
   &::before {
@@ -47,6 +47,12 @@
   &.open {
     position: fixed;
     background-color: $dark-green;
+    .container {
+      padding-bottom: 60px;
+      @include min(1025) {
+        padding-bottom: 0;
+      }
+    }
 
     &::before {
       opacity: .3;
@@ -96,18 +102,18 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
-  padding-bottom: 60px;
+  //padding-bottom: 60px;
   transition: opacity .5s;
   pointer-events: none;
   opacity: 0;
 
   @include min(600) {
-    padding-bottom: 20px;
+    //padding-bottom: 20px;
   }
   @include min(1025) {
     flex-direction: row;
     align-items: center;
-    padding-bottom: 0;
+    //padding-bottom: 0;
     pointer-events: auto;
     opacity: 1;
   }
